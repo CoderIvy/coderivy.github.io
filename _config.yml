@@ -1,2 +1,3 @@
 name:Ivy's Blog
+markdown:version 1.0.0
 permalink:/blog/:year/:month/:day/:title
