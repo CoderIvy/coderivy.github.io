@@ -7,10 +7,4 @@ date: 2018-06-30
 <object width="700" src="https://github.com/CoderIvy/coderivy.github.io/blob/master/resources/publish.netcore2aws.pdf">
 </object>
 
-<p> iframe </p>
-<iframe src="https://github.com/CoderIvy/coderivy.github.io/blob/master/resources/publish.netcore2aws.pdf&embedded=true" style="width:718px;" frameborder="0"></iframe>
-<br/>
-
-<p> embed </p>
-<embed src="https://github.com/CoderIvy/coderivy.github.io/blob/master/resources/publish.netcore2aws.pdf" width="500"  type='application/pdf'>
-<br/>
+<img src="https://pixabay.com/en/cat-young-animal-curious-wildcat-2083492/" alt="Trulli" width="500" height="333">
