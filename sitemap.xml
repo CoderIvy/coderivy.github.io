@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://sample.com/</loc>
+		<loc>http://coderivy.com/</loc>
 	</url>
 	<url>
-		<loc>http://sample.com/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/</loc>
+		<loc>http://coderivy.com/default/Git-clone-authentication-failed/</loc>
+		<lastmod>2019-05-07</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://coderivy.com/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/</loc>
 		<lastmod>2019-05-06</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
