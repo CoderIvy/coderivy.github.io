@@ -77,9 +77,50 @@
 
 
 <div class="post">
+  <h3 class="title"><a href="/default/Use-Visual-Studio-connect-a-remote-project/">Use Visual Studio connect a remote project</a> <span class="date">2019-05-10</span></h3>
+
+  <p><strong>Description:</strong><br />
+Use Visual Studio &amp; server URL to connect a remote project.</p>
+
+<ol>
+<li><p>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="400"><br />
+<br></p></li>
+
+<li><p>Team Explorer shows as following picture<br />
+click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
+<br></p></li>
+
+<li><p>Enter your server URL, click &lsquo;Add&rsquo;<br />
+after a while, all projects from the server which you have permission will show as below<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/3.png" alt="" width="400"><br />
+<br></p></li>
+
+<li><p>Choose a project you want to connect and click &lsquo;Connect&rsquo; button in the bottom<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/4.png" alt="" width="400">
+<br></p></li>
+</ol>
+
+
+  <div class="more">
+    <a href="/default/Use-Visual-Studio-connect-a-remote-project/" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/default/Git-clone-authentication-failed/">Git clone authentication failed</a> <span class="date">2019-05-07</span></h3>
 
-  <p>When I use &ldquo;git clone my_repository_url&rdquo; cloning a project form remote to local in Windows 10 Pro&rsquo;s Terminal, I&rsquo;ve got an &ldquo;Authentication failed&rdquo; error. The reason is git didn&rsquo;t ask me input my username and password for this repository, just simply show failed error. There are many ways to solve this problem, I&rsquo;ve try the following 2 methods:</p>
+  <p><strong>Description:</strong><br />
+Use &ldquo;git clone my_repository_url&rdquo; to clone a project form remote to local in Windows 10 Pro&rsquo;s Terminal.</p>
+
+<p><strong>Result:</strong><br />
+I&rsquo;ve got an &ldquo;Authentication failed&rdquo; error.</p>
+
+<p><strong>Reason:</strong><br />
+Git didn&rsquo;t ask me input my username and password for this repository, just simply show failed error. And there is no credential details about this repository in windows credential manager.</p>
+
+<p>There are many ways to solve this problem, I&rsquo;ve try the following 2 methods:</p>
 
 <ol>
 <li><p>use github desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.</p></li>
@@ -90,16 +131,6 @@ open Credential Manager</p></li>
 </ol>
 
 <p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/1.png" alt="" width="300"></p>
-
-<p><br></p>
-
-<p>click Windows Credentials<br />
-<img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/2.png" alt="" width="600"></p>
-
-<p><br><br></p>
-
-<p>click &lsquo;Add a Generic Credential&rsquo; in Generic Credentials<br />
-input your repository server url, username and password (<strong>Note:</strong> it is server url not full project url)</p>
 
 
   <div class="more">
