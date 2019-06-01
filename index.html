@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Lan&#39;s Tech Notes</title>
+    <title></title>
   
     <meta name="author" content="Lan Chen">
 
@@ -65,7 +65,7 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Lan&#39;s Tech Notes </h1>
+  <h1> </h1>
 </div>
 
 <div class="row">
@@ -75,6 +75,35 @@
 
 <h2>Latest update</h2>
 
+
+<div class="post">
+  <h3 class="title"><a href="/default/React-Uncaught-Invariant-Violation/">React Uncaught Invariant Violation</a> <span class="date">2019-06-01</span></h3>
+
+  <p><br>
+<strong>Description:</strong><br />
+While rendering a list data, I got an error: &lsquo;react-dom.development.js:55 Uncaught Invariant Violation: Objects are not valid as a React child(found: object with keys {id, typeId, reference, &hellip;..}).If you meant to render a collection of children, use an array instead.&rsquo;
+<br><br></p>
+
+<p>I used React Hooks to fetch data and &lsquo;antd&rsquo; version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
+<img src="/assets/media/2019-06-01-react-uncaught-invariant-violation/2.png" alt="" width="600">
+<br><br></p>
+
+<p>And, here is the error<br/><br/>
+<img src="/assets/media/2019-06-01-react-uncaught-invariant-violation/1.png" alt="" width="900">
+<br><br></p>
+
+<p>Throught the network request I found that this page broken before it send request to fetch data, I was curious about that because this data works as expected in other pages. Also, I knew that useEffect() trigled when your component needs to do something after render. (<a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>)<br></p>
+
+<p>So, I kenw that the error happened during render List, I modify the code as below which render the list with object&rsquo;s property rather than whole object, it worked. <br><br></p>
+
+<p><img src="/assets/media/2019-06-01-react-uncaught-invariant-violation/3.png" alt="" width="600">
+<br><br></p>
+
+
+  <div class="more">
+    <a href="/default/React-Uncaught-Invariant-Violation/" class="btn">read more..</a>
+  </div>
+</div>
 
 <div class="post">
   <h3 class="title"><a href="/default/Use-Visual-Studio-connect-a-remote-project/">Use Visual Studio connect a remote project</a> <span class="date">2019-05-10</span></h3>

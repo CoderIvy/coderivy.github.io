@@ -2,7 +2,13 @@
 <rss version="2.0">  <channel>
     <title>CoderIvy.com</title>
     <link>http://coderivy.com</link>
-    <pubDate>10 May 19 11:58 CST</pubDate>
+    <pubDate>01 Jun 19 18:13 NZST</pubDate>
+    <item>
+      <title>React Uncaught Invariant Violation</title>
+      <link>http://coderivy.com/default/React-Uncaught-Invariant-Violation/</link>
+      <pubDate>2019-06-01 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;&lt;br&gt;&#xA;&lt;strong&gt;Description:&lt;/strong&gt;&lt;br /&gt;&#xA;While rendering a list data, I got an error: &amp;lsquo;react-dom.development.js:55 Uncaught Invariant Violation: Objects are not valid as a React child(found: object with keys {id, typeId, reference, &amp;hellip;..}).If you meant to render a collection of children, use an array instead.&amp;rsquo;&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I used React Hooks to fetch data and &amp;lsquo;antd&amp;rsquo; version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below&lt;br&gt;&lt;br&gt;&#xA;&lt;img src=&#34;/assets/media/2019-06-01-react-uncaught-invariant-violation/2.png&#34; alt=&#34;&#34; width=&#34;600&#34;&gt;&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;And, here is the error&lt;br/&gt;&lt;br/&gt;&#xA;&lt;img src=&#34;/assets/media/2019-06-01-react-uncaught-invariant-violation/1.png&#34; alt=&#34;&#34; width=&#34;900&#34;&gt;&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Throught the network request I found that this page broken before it send request to fetch data, I was curious about that because this data works as expected in other pages. Also, I knew that useEffect() trigled when your component needs to do something after render. (&lt;a href=&#34;https://reactjs.org/docs/hooks-effect.html&#34;&gt;Using the Effect Hook&lt;/a&gt;)&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So, I kenw that the error happened during render List, I modify the code as below which render the list with object&amp;rsquo;s property rather than whole object, it worked. &lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;/assets/media/2019-06-01-react-uncaught-invariant-violation/3.png&#34; alt=&#34;&#34; width=&#34;600&#34;&gt;&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Here is the outcome&#xA;&lt;img src=&#34;/assets/media/2019-06-01-react-uncaught-invariant-violation/4.png&#34; alt=&#34;&#34; width=&#34;600&#34;&gt;&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>Use Visual Studio connect a remote project</title>
       <link>http://coderivy.com/default/Use-Visual-Studio-connect-a-remote-project/</link>
