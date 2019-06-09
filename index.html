@@ -77,6 +77,68 @@
 
 
 <div class="post">
+  <h3 class="title"><a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/">Three ways to break a long word in a small container</a> <span class="date">2019-06-10</span></h3>
+
+  <p><strong>Description:</strong><br />
+I met a problem when I fetch a data form database for a table, there is an unsual long string text inside the data, and the table coloum has an relative width so the data just stretched the coloum.  I found 3 ways to break an unsual long work in a relatively small container, there are,</p>
+
+<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
+</code></pre>
+
+<p>Here is the sample code for these three properties,</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  width: 140px; 
+  border: 1px solid blue;
+ 
+}
+
+p.a {
+  word-wrap:break-word;
+}
+
+p.b {
+  word-break: break-all;
+}
+
+p.c {
+  overflow-wrap: break-word;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;break an unusually long string at container width&lt;/h1&gt;
+
+&lt;h2&gt;default:&lt;/h2&gt;
+&lt;p&gt;Thisissomeveryveryverylong word. Words will break according to usual rules.&lt;/p&gt;
+
+&lt;h2&gt;word-wrap:break-word:&lt;/h2&gt;
+&lt;p class=&quot;a&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+
+&lt;h2&gt;word-break: break-all:&lt;/h2&gt;
+&lt;p class=&quot;b&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+&lt;h2&gt;overflow-wrap: break-word:&lt;/h2&gt;
+&lt;p class=&quot;c&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+
+  <div class="more">
+    <a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/default/React-Uncaught-Invariant-Violation/">React Uncaught Invariant Violation</a> <span class="date">2019-06-03</span></h3>
 
   <p><br>

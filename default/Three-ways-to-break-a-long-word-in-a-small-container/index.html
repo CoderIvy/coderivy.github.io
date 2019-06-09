@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Git clone authentication failed</title>
+    <title>Three ways to break a long word in a small container</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -64,65 +64,90 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>Git clone authentication failed </h1>
+  <h1>Three ways to break a long word in a small container </h1>
 </div>
 
 <div class="row">
   <div class="span8">
     <p><strong>Description:</strong><br />
-Use &ldquo;git clone my_repository_url&rdquo; to clone a project form remote to local in Windows 10 Pro&rsquo;s Terminal.</p>
+I met a problem when I fetch a data form database for a table, there is an unsual long string text inside the data, and the table coloum has an relative width so the data just stretched the coloum.  I found 3 ways to break an unsual long work in a relatively small container, there are,</p>
 
-<p><strong>Result:</strong><br />
-I&rsquo;ve got an &ldquo;Authentication failed&rdquo; error.</p>
+<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
+</code></pre>
 
-<p><strong>Reason:</strong><br />
-Git didn&rsquo;t ask me input my username and password for this repository, just simply show failed error. And there is no credential details about this repository in windows credential manager.</p>
+<p>Here is the sample code for these three properties,</p>
 
-<p>There are many ways to solve this problem, I&rsquo;ve try the following 2 methods:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  width: 140px; 
+  border: 1px solid blue;
+ 
+}
 
-<ol>
-<li><p>use github desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.</p></li>
+p.a {
+  word-wrap:break-word;
+}
 
-<li><p>manually add git authentication to windows credential manager:
-<br>
-open Credential Manager</p></li>
-</ol>
+p.b {
+  word-break: break-all;
+}
 
-<p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/1.png" alt="" width="300"></p>
+p.c {
+  overflow-wrap: break-word;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-<p><br></p>
+&lt;h1&gt;break an unusually long string at container width&lt;/h1&gt;
 
-<p>click Windows Credentials<br />
-<img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/2.png" alt="" width="600"></p>
+&lt;h2&gt;default:&lt;/h2&gt;
+&lt;p&gt;Thisissomeveryveryverylong word. Words will break according to usual rules.&lt;/p&gt;
 
-<p><br><br></p>
+&lt;h2&gt;word-wrap:break-word:&lt;/h2&gt;
+&lt;p class=&quot;a&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
 
-<p>click &lsquo;Add a Generic Credential&rsquo; in Generic Credentials<br />
-input your repository server url, username and password (<strong>Note:</strong> it is server url not full project url)</p>
 
-<p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/3.png" alt="" width="600">
-<br><br>
- <strong>Important:</strong> add &lsquo;git:&rsquo; before your server url, the final result should be like:
-      <code>git:http://your_server_url</code></p>
+&lt;h2&gt;word-break: break-all:&lt;/h2&gt;
+&lt;p class=&quot;b&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
 
-<p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/4.png" alt="" width="600"><br />
+&lt;h2&gt;overflow-wrap: break-word:&lt;/h2&gt;
+&lt;p class=&quot;c&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
+<p>And, here is the outcome,</p>
+
+<p><img src="/assets/media/2019-06-10-Three-ways-to-break-a-long-word-in-a-small-container/1.png" alt="" width="600">
 <br><br></p>
 
-<p>After add this generic credential, you don&rsquo;t have to input the username &amp; password for all repostories form this server.</p>
+<h4>References</h4>
+
+<ul>
+<li><a href="https://css-tricks.com/almanac/properties/o/overflow-wrap/">css-tricks</a></li>
+<li><a href="https://www.w3schools.com/cssref/css3_pr_word-break.asp">w3schools</a></li>
+<li><a href="https://stackoverflow.com/questions/1795109/what-is-the-difference-between-word-break-break-all-versus-word-wrap-break/1795878">stack overflow</a></li>
+</ul>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/Use-Visual-Studio-connect-a-remote-project/" title="Use Visual Studio connect a remote project">&larr; Previous</a></li>
           
+            <li class="prev disabled"><a>&larr; Previous</a></li>
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/" title="How to make the native scrollbar thinner in Google Chrome">Next &rarr;</a></li>
+            <li class="next"><a href="/default/React-Uncaught-Invariant-Violation/" title="React Uncaught Invariant Violation">Next &rarr;</a></li>
           
           
         </ul>
@@ -148,7 +173,7 @@ input your repository server url, username and password (<strong>Note:</strong> 
   
   <div class="span4">
     <h4>Published</h4>
-    <div class="date"><span>2019-05-07</span></div>
+    <div class="date"><span>2019-06-10</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -163,7 +188,7 @@ input your repository server url, username and password (<strong>Note:</strong> 
     <ul class="tag_box">
     
       <li>
-  <a href="/tags/#Git-ref">Git <span>1</span></a>
+  <a href="/tags/#CSS-ref">CSS <span>2</span></a>
 </li>
     
     </ul>
