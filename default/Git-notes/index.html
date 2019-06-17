@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Use Visual Studio connect a remote project</title>
+    <title>Git notes</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -64,53 +64,94 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>Use Visual Studio connect a remote project </h1>
+  <h1>Git notes </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p><strong>Description:</strong><br />
-Use Visual Studio &amp; server URL to connect all your remote projects from the same server (the one you have access permission).<br />
-<br></p>
+    <p><br>
+<strong>description:</strong><br>
+These are my personal git notes for my daily life.<br><br></p>
 
-<ol>
-<li><p>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br />
-<br></p></li>
+<p><code>git status</code>
+check file status <br><br></p>
 
-<li><p>Team Explorer shows as the following picture<br />
-click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
-<br></p></li>
+<p><code>git clone RepositoryURL</code>
+clone a github repository to you local folder. <br><br></p>
 
-<li><p>Enter your server URL, click &lsquo;Add&rsquo;<br />
-after a while, all projects from the server which you have permission will show as below<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/3.png" alt="" width="400"><br />
-<br></p></li>
+<p><code>git add FilePath</code>
+add the file you name it. <br><br></p>
 
-<li><p>Choose a project you want to connect and click the &lsquo;Connect&rsquo; button in the bottom<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/4.png" alt="" width="400">
-<br></p></li>
+<p><code>git add .</code>
+add all files you has modified. <br><br></p>
 
-<li><p>The project&rsquo;s full URL will show as below<br />
-Choose a folder which you want to save the code and click &lsquo;clone&rsquo; to clone the project from remote to local<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/5.png" alt="" width="400">
-<br></p></li>
-</ol>
+<p><code>git commit -m &quot;your comment for this commit&quot;</code>
+commit the changes you have added and add a comment for this change ad the same time. (<strong>Note:</strong> If you miss &lsquo;-m&rsquo;, it will open a VIM file for you to add comment for this commit after this command) <br><br></p>
+
+<p><code>git pull</code>
+pull code from remote repository (<strong>Note:</strong> to avoid overwrite code in remote repository, it is better to use &lsquo;git pull&rsquo; before every &lsquo;git push&rsquo; )<br><br></p>
+
+<p><code>git push</code>
+push your local changes to remote repository <br><br></p>
+
+<p><code>git stash</code>
+save current changes to current branch<br><br></p>
+
+<p><code>git stash list</code>
+list your stash list in current branch<br><br></p>
+
+<p><code>git stash pop</code>
+show the latest chage which you stashed before<br><br></p>
+
+<p><code>git stash drop</code>
+drop the latest stash code which you stashed before<br><br></p>
+
+<p><code>git mergetool</code>
+open git’s merge tool to handle merge event<br><br></p>
+
+<p><code>gitk</code>
+show all commit histories, including your local changes<br><br></p>
+
+<p><code>git config --global merge.tool meld</code>
+set &lsquo;Meld&rsquo; as default merge tool<br><br></p>
+
+<p><code>git config --global mergetool.meld.path /filepath/filepath/</code>
+set &lsquo;Meld&rsquo; file path to default merge tool<br><br></p>
+
+<p><code>Git checkout -b NewBranchName RemoteBranchName</code>
+create a new branch based on a remote branch<br><br></p>
+
+<p><code>git reset --soft HEAD~1</code>
+Delete the most recent commit, <strong>keeping</strong> the work you&rsquo;ve done (<strong>Note:</strong> this command works for commits haven&rsquo;t push to remote repository, the number show how many local commit you want to reset)<br><br></p>
+
+<p><code>git reset --hard HEAD~1</code>
+Delete the most recent commit, <strong>destroying</strong> the work you&rsquo;ve done <br><br></p>
+
+<p><code>git branch --all</code>
+show all branches the repository has, including the branches you never used<br><br></p>
+
+<p><code>git checkout BranchName</code>
+switch to named branche<br><br></p>
+
+<p><code>Git branch -D BranchName</code>
+delete named branche<br><br></p>
+
+<p><code>Git merge BranchName</code>
+merge branche (<strong>Note</strong> the BranchName should be the one your want fetch data from and your current branch should be the one you want get more data)<br><br></p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/React-Uncaught-Invariant-Violation/" title="React Uncaught Invariant Violation">&larr; Previous</a></li>
+            <li class="prev"><a href="/default/app.model--namespace-should-be-unique/" title="app.model: namespace should be unique">&larr; Previous</a></li>
           
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/Git-clone-authentication-failed/" title="Git clone authentication failed">Next &rarr;</a></li>
+            <li class="next"><a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/" title="Three ways to break a long word in a small container">Next &rarr;</a></li>
           
           
         </ul>
@@ -136,7 +177,7 @@ Choose a folder which you want to save the code and click &lsquo;clone&rsquo; to
   
   <div class="span4">
     <h4>Published</h4>
-    <div class="date"><span>2019-05-10</span></div>
+    <div class="date"><span>2019-06-17</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -151,7 +192,7 @@ Choose a folder which you want to save the code and click &lsquo;clone&rsquo; to
     <ul class="tag_box">
     
       <li>
-  <a href="/tags/#VS-ref">VS <span>1</span></a>
+  <a href="/tags/#Git-ref">Git <span>2</span></a>
 </li>
     
     </ul>
