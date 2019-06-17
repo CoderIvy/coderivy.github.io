@@ -77,10 +77,39 @@
 
 
 <div class="post">
+  <h3 class="title"><a href="/default/app.model--namespace-should-be-unique/">app.model: namespace should be unique</a> <span class="date">2019-06-17</span></h3>
+
+  <p><br>
+<strong>Description:</strong><br />
+I am working on a react project this morning, and I found I need a new model file for a future function so I just simply copy the other exist model file and rename it. Then, the error shows:
+<strong>app.model: namespace should be unique</strong>, the error showing as follows: <br><br></p>
+
+<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800">
+<br><br></p>
+
+<p>The error title told me that I have a duplicate namespace on app.model. I look at the model folder double check the file name and there are unique, so google this error, the reasons are variety, such as, <br><br>
++ load the same model more than once<br>
++ dynamic register model <br>
+<br>
+but, my error is just simply because I add a &lsquo;namespace&rsquo; property in each model file so when I<br />
+copy and rename the file, I didn&rsquo;t change the value for &lsquo;namespace&rsquo; in the new file.
+<br><br>
+<img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/2.png" alt="" width="300"></p>
+
+<p><br>
+After I change the value for the ‘namespace’, the error gone.</p>
+
+
+  <div class="more">
+    <a href="/default/app.model--namespace-should-be-unique/" class="btn">read more..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/">Three ways to break a long word in a small container</a> <span class="date">2019-06-10</span></h3>
 
   <p><strong>Description:</strong><br />
-I met a problem when I fetch a data form database for a table, there is an unsual long string text inside the data, and the table coloum has an relative width so the data just stretched the coloum.  I found 3 ways to break an unsual long work in a relatively small container, there are,</p>
+I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
 
 <pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
 </code></pre>
@@ -143,10 +172,10 @@ p.c {
 
   <p><br>
 <strong>Description:</strong><br />
-While rendering a list data, I got an error: &lsquo;react-dom.development.js:55 Uncaught Invariant Violation: Objects are not valid as a React child(found: object with keys {id, typeId, reference, &hellip;..}).If you meant to render a collection of children, use an array instead.&rsquo;
+While rendering a list data, I got an error: ‘react-dom.development.js:55 Uncaught Invariant Violation: Objects are not valid as a React child(found: object with keys {id, typeId, reference, …..}). If you meant to render a collection of children, use an array instead.’
 <br><br></p>
 
-<p>I used React Hooks to fetch data and &lsquo;antd&rsquo; version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
+<p>I used React Hooks to fetch data and ‘antd’ version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
 <img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600">
 <br><br></p>
 
@@ -154,9 +183,9 @@ While rendering a list data, I got an error: &lsquo;react-dom.development.js:55 
 <img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/1.png" alt="" width="900">
 <br><br></p>
 
-<p>Throught the network request I found that this page broken before it send request to fetch data, I was curious about that because this data works as expected in other pages. Also, I knew that useEffect() trigled when your component needs to do something after render. (<a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>)<br></p>
+<p>Through the network request I found that this page is broken before it sends the request to fetch data, I was curious about that because this data works as expected in other pages. Also, I knew that useEffect() triggered when your component needs to do something after render. (<a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>)<br></p>
 
-<p>So, I kenw that the error happened during render List, I modify the code as below which render the list with object&rsquo;s property rather than whole object, it worked. <br><br></p>
+<p>So, I knew that the error happened during render List, I modify the code as below which render the list with object’s property rather than the whole object, it worked. <br><br></p>
 
 <p><img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/3.png" alt="" width="600">
 <br><br></p>
@@ -171,7 +200,7 @@ While rendering a list data, I got an error: &lsquo;react-dom.development.js:55 
   <h3 class="title"><a href="/default/Use-Visual-Studio-connect-a-remote-project/">Use Visual Studio connect a remote project</a> <span class="date">2019-05-10</span></h3>
 
   <p><strong>Description:</strong><br />
-Use Visual Studio &amp; server URL to connect all your remote projects from same server (the one you have access permission).<br />
+Use Visual Studio &amp; server URL to connect all your remote projects from the same server (the one you have access permission).<br />
 <br></p>
 
 <ol>
@@ -179,7 +208,7 @@ Use Visual Studio &amp; server URL to connect all your remote projects from same
 <img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br />
 <br></p></li>
 
-<li><p>Team Explorer shows as following picture<br />
+<li><p>Team Explorer shows as the following picture<br />
 click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
 <img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
 <br></p></li>
@@ -189,7 +218,7 @@ after a while, all projects from the server which you have permission will show 
 <img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/3.png" alt="" width="400"><br />
 <br></p></li>
 
-<li><p>Choose a project you want to connect and click &lsquo;Connect&rsquo; button in the bottom<br />
+<li><p>Choose a project you want to connect and click the &lsquo;Connect&rsquo; button in the bottom<br />
 <img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/4.png" alt="" width="400">
 <br></p></li>
 </ol>
@@ -204,22 +233,22 @@ after a while, all projects from the server which you have permission will show 
   <h3 class="title"><a href="/default/Git-clone-authentication-failed/">Git clone authentication failed</a> <span class="date">2019-05-07</span></h3>
 
   <p><strong>Description:</strong><br />
-Use &ldquo;git clone my_repository_url&rdquo; to clone a project form remote to local in Windows 10 Pro&rsquo;s Terminal.</p>
+Use “git clone my_repository_url” to clone a project form remote to local in Windows 10 Pro’s Terminal.</p>
 
 <p><strong>Result:</strong><br />
-I&rsquo;ve got an &ldquo;Authentication failed&rdquo; error.</p>
+I’ve got an “Authentication failed” error.</p>
 
 <p><strong>Reason:</strong><br />
-Git didn&rsquo;t ask me input my username and password for this repository, just simply show failed error. And there is no credential details about this repository in windows credential manager.</p>
+Git didn’t ask me to input my username and password for this repository, just simply show a failed error. And there are no credential details about this repository in windows credential manager.</p>
 
-<p>There are many ways to solve this problem, I&rsquo;ve try the following 2 methods:</p>
+<p>There are many ways to solve this problem, I’ve tried the following 2 methods:</p>
 
 <ol>
-<li><p>use github desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.</p></li>
-
-<li><p>manually add git authentication to windows credential manager:
+<li>use GitHub desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.
+<br><br></li>
+<li>manually add git authentication to windows credential manager:
 <br>
-open Credential Manager</p></li>
+open Credential Manager</li>
 </ol>
 
 <p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/1.png" alt="" width="300"></p>
@@ -234,9 +263,9 @@ open Credential Manager</p></li>
   <h3 class="title"><a href="/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/">How to make the native scrollbar thinner in Google Chrome</a> <span class="date">2019-05-06</span></h3>
 
   <p><strong>Description:</strong><br />
-Add a native scrollbar to the project and make the scrollbar thinner..</p>
+Add a native scrollbar to the project and make the scrollbar thinner.</p>
 
-<p>Most people known how to add a scrollbar to your pages when the content of an element is too big to fit in the specified area. So, I will just give a brief introduction to CSS <strong>overflow</strong> property. <strong>overflow</strong> property has the following values:</p>
+<p>Most people knew how to add a scrollbar to your pages when the content of an element is too big to fit in the specified area. So, I will just give a brief introduction to CSS <strong>overflow</strong> property. <strong>overflow</strong> property has the following values:</p>
 
 <ul>
 <li>visible - Default. The overflow is not clipped. The content renders outside the element&rsquo;s box<br /></li>
@@ -248,7 +277,7 @@ Add a native scrollbar to the project and make the scrollbar thinner..</p>
 <p>Please <strong>note</strong> that: the <strong>overflow</strong> property only works for block elements with a specified height.
 <br><br></p>
 
-<p>First and the easiest way to set a scrollbar&rsquo;s width is to use <strong>scrollbar-width</strong> property. <strong>scrollbar-width</strong> is a property that controls the width or &ldquo;thickness&rdquo; of a scrollbar. <strong>scrollbar-width</strong> accepts the following values:</p>
+<p>First and the easiest way to set a scrollbar’s width is to use the <strong>scrollbar-width</strong> property. <strong>scrollbar-width</strong> is a property that controls the width or “thickness” of a scrollbar. <strong>scrollbar-width</strong> accepts the following values:</p>
 
 <ul>
 <li>auto is the default value and will render the standard scrollbars for the user agent.</li>

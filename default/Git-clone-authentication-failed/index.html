@@ -70,22 +70,22 @@
 <div class="row">
   <div class="span8">
     <p><strong>Description:</strong><br />
-Use &ldquo;git clone my_repository_url&rdquo; to clone a project form remote to local in Windows 10 Pro&rsquo;s Terminal.</p>
+Use “git clone my_repository_url” to clone a project form remote to local in Windows 10 Pro’s Terminal.</p>
 
 <p><strong>Result:</strong><br />
-I&rsquo;ve got an &ldquo;Authentication failed&rdquo; error.</p>
+I’ve got an “Authentication failed” error.</p>
 
 <p><strong>Reason:</strong><br />
-Git didn&rsquo;t ask me input my username and password for this repository, just simply show failed error. And there is no credential details about this repository in windows credential manager.</p>
+Git didn’t ask me to input my username and password for this repository, just simply show a failed error. And there are no credential details about this repository in windows credential manager.</p>
 
-<p>There are many ways to solve this problem, I&rsquo;ve try the following 2 methods:</p>
+<p>There are many ways to solve this problem, I’ve tried the following 2 methods:</p>
 
 <ol>
-<li><p>use github desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.</p></li>
-
-<li><p>manually add git authentication to windows credential manager:
+<li>use GitHub desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.
+<br><br></li>
+<li>manually add git authentication to windows credential manager:
 <br>
-open Credential Manager</p></li>
+open Credential Manager</li>
 </ol>
 
 <p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/1.png" alt="" width="300"></p>
@@ -97,18 +97,18 @@ open Credential Manager</p></li>
 
 <p><br><br></p>
 
-<p>click &lsquo;Add a Generic Credential&rsquo; in Generic Credentials<br />
-input your repository server url, username and password (<strong>Note:</strong> it is server url not full project url)</p>
+<p>click ‘Add a Generic Credential’ in Generic Credentials
+input your repository server URL, username, and password (<strong>Note:</strong> it is server URL, not full project URL)</p>
 
 <p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/3.png" alt="" width="600">
 <br><br>
- <strong>Important:</strong> add &lsquo;git:&rsquo; before your server url, the final result should be like:
+ <strong>Important:</strong> add ‘git:’ before your server URL, the final result should be like:
       <code>git:http://your_server_url</code></p>
 
 <p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/4.png" alt="" width="600"><br />
 <br><br></p>
 
-<p>After add this generic credential, you don&rsquo;t have to input the username &amp; password for all repostories form this server.</p>
+<p>After adding this generic credential, you don’t have to input the username &amp; password for all repositories form this server.</p>
 
     <hr>
     <div class="pagination">
@@ -154,7 +154,7 @@ input your repository server url, username and password (<strong>Note:</strong> 
     <ul class="tag_box">
     
       <li>
-  <a href="/categories/#default-ref">default <span>5</span></a>
+  <a href="/categories/#default-ref">default <span>6</span></a>
 </li>
     
     </ul>

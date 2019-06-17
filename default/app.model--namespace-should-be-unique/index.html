@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Three ways to break a long word in a small container</title>
+    <title>app.model: namespace should be unique</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -64,90 +64,49 @@
 
       <div class="content">
         <div class="page-header">
-  <h1>Three ways to break a long word in a small container </h1>
+  <h1>app.model: namespace should be unique </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <p><strong>Description:</strong><br />
-I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
+    <p><br>
+<strong>Description:</strong><br />
+I am working on a react project this morning, and I found I need a new model file for a future function so I just simply copy the other exist model file and rename it. Then, the error shows:
+<strong>app.model: namespace should be unique</strong>, the error showing as follows: <br><br></p>
 
-<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
-</code></pre>
-
-<p>Here is the sample code for these three properties,</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-p {
-  width: 140px; 
-  border: 1px solid blue;
- 
-}
-
-p.a {
-  word-wrap:break-word;
-}
-
-p.b {
-  word-break: break-all;
-}
-
-p.c {
-  overflow-wrap: break-word;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;h1&gt;break an unusually long string at container width&lt;/h1&gt;
-
-&lt;h2&gt;default:&lt;/h2&gt;
-&lt;p&gt;Thisissomeveryveryverylong word. Words will break according to usual rules.&lt;/p&gt;
-
-&lt;h2&gt;word-wrap:break-word:&lt;/h2&gt;
-&lt;p class=&quot;a&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-
-&lt;h2&gt;word-break: break-all:&lt;/h2&gt;
-&lt;p class=&quot;b&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-&lt;h2&gt;overflow-wrap: break-word:&lt;/h2&gt;
-&lt;p class=&quot;c&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-</code></pre>
-
-<p>And, here is the outcome,</p>
-
-<p><img src="/assets/media/2019-06-10-Three-ways-to-break-a-long-word-in-a-small-container/1.png" alt="" width="600">
+<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800">
 <br><br></p>
 
-<h4>References</h4>
+<p>The error title told me that I have a duplicate namespace on app.model. I look at the model folder double check the file name and there are unique, so google this error, the reasons are variety, such as, <br><br>
++ load the same model more than once<br>
++ dynamic register model <br>
+<br>
+but, my error is just simply because I add a &lsquo;namespace&rsquo; property in each model file so when I<br />
+copy and rename the file, I didn&rsquo;t change the value for &lsquo;namespace&rsquo; in the new file.
+<br><br>
+<img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/2.png" alt="" width="300"></p>
 
-<ul>
-<li><a href="https://css-tricks.com/almanac/properties/o/overflow-wrap/">css-tricks</a></li>
-<li><a href="https://www.w3schools.com/cssref/css3_pr_word-break.asp">w3schools</a></li>
-<li><a href="https://stackoverflow.com/questions/1795109/what-is-the-difference-between-word-break-break-all-versus-word-wrap-break/1795878">stack overflow</a></li>
-</ul>
+<p><br>
+After I change the value for the ‘namespace’, the error gone.</p>
+
+<p><br>
+If you want to save some energy for this problem, you can just ignore ‘namespace’ in the model file, it will automatically name your model’s namespace as your file name.<br><br>
+<br>
+ps: if there is any mistake, please let me know.</p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/app.model--namespace-should-be-unique/" title="app.model: namespace should be unique">&larr; Previous</a></li>
           
+            <li class="prev disabled"><a>&larr; Previous</a></li>
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/React-Uncaught-Invariant-Violation/" title="React Uncaught Invariant Violation">Next &rarr;</a></li>
+            <li class="next"><a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/" title="Three ways to break a long word in a small container">Next &rarr;</a></li>
           
           
         </ul>
@@ -173,7 +132,7 @@ p.c {
   
   <div class="span4">
     <h4>Published</h4>
-    <div class="date"><span>2019-06-10</span></div>
+    <div class="date"><span>2019-06-17</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -188,7 +147,7 @@ p.c {
     <ul class="tag_box">
     
       <li>
-  <a href="/tags/#CSS-ref">CSS <span>2</span></a>
+  <a href="/tags/#React-ref">React <span>2</span></a>
 </li>
     
     </ul>
