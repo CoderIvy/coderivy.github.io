@@ -2,7 +2,13 @@
 <rss version="2.0">  <channel>
     <title>Lan&#39;s Tech Notes</title>
     <link>http://coderivy.com</link>
-    <pubDate>17 Jun 19 22:01 NZST</pubDate>
+    <pubDate>23 Jun 19 21:33 NZST</pubDate>
+    <item>
+      <title>Tips for SPA optimization - Vue.js</title>
+      <link>http://coderivy.com/default/Tips-for-SPA-optimization---Vue.js/</link>
+      <pubDate>2019-06-23 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;&lt;br&gt;&#xA;&lt;strong&gt;description:&lt;/strong&gt; &lt;br&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Useful tips for Vue.js Single Page Application optimization, &lt;a href=&#34;https://medium.com/binarcode/tips-for-building-fast-and-light-vue-js-spa-7a83407d4bc3&#34;&gt;Tips for building fast and light Vue.js SPA&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;br&gt;&#xA;&lt;strong&gt;Note:&lt;/strong&gt; for people who fist visit medium.com, you might have to login with a google or facebook account, and re-click the link.&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>app.model: namespace should be unique</title>
       <link>http://coderivy.com/default/app.model--namespace-should-be-unique/</link>
