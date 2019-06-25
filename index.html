@@ -84,8 +84,7 @@
 
 <p>Useful tips for Vue.js Single Page Application optimization, <a href="https://medium.com/binarcode/tips-for-building-fast-and-light-vue-js-spa-7a83407d4bc3">Tips for building fast and light Vue.js SPA</a></p>
 
-<p><br>
-<strong>Note:</strong> for people who fist visit medium.com, you might have to login with a google or facebook account, and re-click the link.
+<p><strong>Note:</strong> for people who fist visit medium.com, you might have to login with a google or facebook account, and re-click the link.
 <br><br></p>
 
 
@@ -114,9 +113,6 @@ copy and rename the file, I didn&rsquo;t change the value for &lsquo;namespace&r
 <br><br>
 <img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/2.png" alt="" width="300"></p>
 
-<p><br>
-After I change the value for the ‘namespace’, the error gone.</p>
-
 
   <div class="more">
     <a href="/default/app.model--namespace-should-be-unique/" class="btn">read more..</a>
@@ -136,15 +132,6 @@ check file status <br><br></p>
 <p><code>git clone RepositoryURL</code>
 clone a github repository to you local folder. <br><br></p>
 
-<p><code>git add FilePath</code>
-add the file you name it. <br><br></p>
-
-<p><code>git add .</code>
-add all files you has modified. <br><br></p>
-
-<p><code>git commit -m &quot;your comment for this commit&quot;</code>
-commit the changes you have added and add a comment for this change ad the same time. (<strong>Note:</strong> If you miss &lsquo;-m&rsquo;, it will open a VIM file for you to add comment for this commit after this command) <br><br></p>
-
 
   <div class="more">
     <a href="/default/Git-notes/" class="btn">read more..</a>
@@ -154,7 +141,8 @@ commit the changes you have added and add a comment for this change ad the same 
 <div class="post">
   <h3 class="title"><a href="/default/Three-ways-to-break-a-long-word-in-a-small-container/">Three ways to break a long word in a small container</a> <span class="date">2019-06-10</span></h3>
 
-  <p><strong>Description:</strong><br />
+  <p><br>
+<strong>Description:</strong>  <br>
 I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
 
 <pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
@@ -162,50 +150,7 @@ I met a problem when I fetch data from the database for a table, there is an unu
 
 <p>Here is the sample code for these three properties,</p>
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-p {
-  width: 140px; 
-  border: 1px solid blue;
- 
-}
-
-p.a {
-  word-wrap:break-word;
-}
-
-p.b {
-  word-break: break-all;
-}
-
-p.c {
-  overflow-wrap: break-word;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;h1&gt;break an unusually long string at container width&lt;/h1&gt;
-
-&lt;h2&gt;default:&lt;/h2&gt;
-&lt;p&gt;Thisissomeveryveryverylong word. Words will break according to usual rules.&lt;/p&gt;
-
-&lt;h2&gt;word-wrap:break-word:&lt;/h2&gt;
-&lt;p class=&quot;a&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-
-&lt;h2&gt;word-break: break-all:&lt;/h2&gt;
-&lt;p class=&quot;b&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-&lt;h2&gt;overflow-wrap: break-word:&lt;/h2&gt;
-&lt;p class=&quot;c&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-</code></pre>
+<p>```</p>
 
 
   <div class="more">
@@ -225,17 +170,6 @@ While rendering a list data, I got an error: ‘react-dom.development.js:55 Unca
 <img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600">
 <br><br></p>
 
-<p>And, here is the error<br/><br/>
-<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/1.png" alt="" width="900">
-<br><br></p>
-
-<p>Through the network request I found that this page is broken before it sends the request to fetch data, I was curious about that because this data works as expected in other pages. Also, I knew that useEffect() triggered when your component needs to do something after render. (<a href="https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a>)<br></p>
-
-<p>So, I knew that the error happened during render List, I modify the code as below which render the list with object’s property rather than the whole object, it worked. <br><br></p>
-
-<p><img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/3.png" alt="" width="600">
-<br><br></p>
-
 
   <div class="more">
     <a href="/default/React-Uncaught-Invariant-Violation/" class="btn">read more..</a>
@@ -245,7 +179,8 @@ While rendering a list data, I got an error: ‘react-dom.development.js:55 Unca
 <div class="post">
   <h3 class="title"><a href="/default/Use-Visual-Studio-connect-a-remote-project/">Use Visual Studio connect a remote project</a> <span class="date">2019-05-10</span></h3>
 
-  <p><strong>Description:</strong><br />
+  <p><br>
+<strong>Description:</strong>  <br>
 Use Visual Studio &amp; server URL to connect all your remote projects from the same server (the one you have access permission).<br />
 <br></p>
 
@@ -258,15 +193,6 @@ Use Visual Studio &amp; server URL to connect all your remote projects from the 
 click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
 <img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
 <br></p></li>
-
-<li><p>Enter your server URL, click &lsquo;Add&rsquo;<br />
-after a while, all projects from the server which you have permission will show as below<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/3.png" alt="" width="400"><br />
-<br></p></li>
-
-<li><p>Choose a project you want to connect and click the &lsquo;Connect&rsquo; button in the bottom<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/4.png" alt="" width="400">
-<br></p></li>
 </ol>
 
 
@@ -278,7 +204,8 @@ after a while, all projects from the server which you have permission will show 
 <div class="post">
   <h3 class="title"><a href="/default/Git-clone-authentication-failed/">Git clone authentication failed</a> <span class="date">2019-05-07</span></h3>
 
-  <p><strong>Description:</strong><br />
+  <p><br>
+<strong>Description:</strong>  <br>
 Use “git clone my_repository_url” to clone a project form remote to local in Windows 10 Pro’s Terminal.</p>
 
 <p><strong>Result:</strong><br />
@@ -286,18 +213,6 @@ I’ve got an “Authentication failed” error.</p>
 
 <p><strong>Reason:</strong><br />
 Git didn’t ask me to input my username and password for this repository, just simply show a failed error. And there are no credential details about this repository in windows credential manager.</p>
-
-<p>There are many ways to solve this problem, I’ve tried the following 2 methods:</p>
-
-<ol>
-<li>use GitHub desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.
-<br><br></li>
-<li>manually add git authentication to windows credential manager:
-<br>
-open Credential Manager</li>
-</ol>
-
-<p><img src="/assets/media/2019-05-07-Authentication-failed-when-using-git-cloning-repository/1.png" alt="" width="300"></p>
 
 
   <div class="more">
@@ -308,28 +223,20 @@ open Credential Manager</li>
 <div class="post">
   <h3 class="title"><a href="/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/">How to make the native scrollbar thinner in Google Chrome</a> <span class="date">2019-05-06</span></h3>
 
-  <p><strong>Description:</strong><br />
+  <p><br>
+<strong>Description:</strong>  <br>
 Add a native scrollbar to the project and make the scrollbar thinner.</p>
 
-<p>Most people knew how to add a scrollbar to your pages when the content of an element is too big to fit in the specified area. So, I will just give a brief introduction to CSS <strong>overflow</strong> property. <strong>overflow</strong> property has the following values:</p>
+<p>Most people knew how to add a scrollbar to your pages when the content of an element is too big to fit in the specified area. So, I will just give a brief introduction to CSS <strong>overflow</strong> property. <strong>overflow</strong> property has the following values:  <br><br></p>
 
 <ul>
 <li>visible - Default. The overflow is not clipped. The content renders outside the element&rsquo;s box<br /></li>
 <li>hidden - The overflow is clipped, and the rest of the content will be invisible<br /></li>
 <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content<br /></li>
-<li>auto - Similar to scroll, but it adds scrollbars only when necessary<br /></li>
-</ul>
-
-<p>Please <strong>note</strong> that: the <strong>overflow</strong> property only works for block elements with a specified height.
-<br><br></p>
-
-<p>First and the easiest way to set a scrollbar’s width is to use the <strong>scrollbar-width</strong> property. <strong>scrollbar-width</strong> is a property that controls the width or “thickness” of a scrollbar. <strong>scrollbar-width</strong> accepts the following values:</p>
-
-<ul>
-<li>auto is the default value and will render the standard scrollbars for the user agent.</li>
-<li>thin will tell the user agent to use thinner scrollbars, when applicable.</li>
-<li>none will hide the scrollbar completely, without affecting the element&rsquo;s scrollability.</li>
-<li><code>&lt;length&gt;</code> is being debated, but (if added) would be a maximum width of the scrollbar.</li>
+<li>auto - Similar to scroll, but it adds scrollbars only when necessary<br />
+<br>
+Please <strong>note</strong> that: the <strong>overflow</strong> property only works for block elements with a specified height.
+<br><br></li>
 </ul>
 
 
