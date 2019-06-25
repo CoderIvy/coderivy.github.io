@@ -101,17 +101,7 @@
 I am working on a react project this morning, and I found I need a new model file for a future function so I just simply copy the other exist model file and rename it. Then, the error shows:
 <strong>app.model: namespace should be unique</strong>, the error showing as follows: <br><br></p>
 
-<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800">
-<br><br></p>
-
-<p>The error title told me that I have a duplicate namespace on app.model. I look at the model folder double check the file name and there are unique, so google this error, the reasons are variety, such as, <br><br>
-+ load the same model more than once<br>
-+ dynamic register model <br>
-<br>
-but, my error is just simply because I add a &lsquo;namespace&rsquo; property in each model file so when I<br />
-copy and rename the file, I didn&rsquo;t change the value for &lsquo;namespace&rsquo; in the new file.
-<br><br>
-<img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/2.png" alt="" width="300"></p>
+<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800"></p>
 
 
   <div class="more">
@@ -126,10 +116,11 @@ copy and rename the file, I didn&rsquo;t change the value for &lsquo;namespace&r
 <strong>description:</strong><br>
 These are my personal git notes for my daily life.<br><br></p>
 
-<p><code>git status</code>
-check file status <br><br></p>
+<pre><code class="language-git">check file status &lt;br&gt;&lt;br&gt;
 
-<p><code>git clone RepositoryURL</code>
+</code></pre>
+
+<p>git clone RepositoryURL```
 clone a github repository to you local folder. <br><br></p>
 
 
@@ -167,8 +158,7 @@ While rendering a list data, I got an error: ‘react-dom.development.js:55 Unca
 <br><br></p>
 
 <p>I used React Hooks to fetch data and ‘antd’ version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
-<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600">
-<br><br></p>
+<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600"></p>
 
 
   <div class="more">
@@ -185,14 +175,8 @@ Use Visual Studio &amp; server URL to connect all your remote projects from the 
 <br></p>
 
 <ol>
-<li><p>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br />
-<br></p></li>
-
-<li><p>Team Explorer shows as the following picture<br />
-click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
-<br></p></li>
+<li>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br /></li>
 </ol>
 
 
@@ -233,10 +217,7 @@ Add a native scrollbar to the project and make the scrollbar thinner.</p>
 <li>visible - Default. The overflow is not clipped. The content renders outside the element&rsquo;s box<br /></li>
 <li>hidden - The overflow is clipped, and the rest of the content will be invisible<br /></li>
 <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content<br /></li>
-<li>auto - Similar to scroll, but it adds scrollbars only when necessary<br />
-<br>
-Please <strong>note</strong> that: the <strong>overflow</strong> property only works for block elements with a specified height.
-<br><br></li>
+<li>auto - Similar to scroll, but it adds scrollbars only when necessary<br /></li>
 </ul>
 
 
@@ -288,3 +269,20 @@ Please <strong>note</strong> that: the <strong>overflow</strong> property only w
 </script>
   </body>
 </html>
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+	var _gor_compile_ver = 0;
+	function _sc(data) {
+		if (parseInt(data) != _gor_compile_ver) {
+			location.reload(true);
+		} else {
+			setTimeout(_gor_f5, 1000);
+		}
+	}
+	function _gor_f5() {$.get("/_api/f5?ver="+_gor_compile_ver, "", _sc)};
+	$.get("/_api/f5", "",  function(data) {_gor_compile_ver = parseInt(data);setTimeout(_gor_f5, 1000);});
+	});
+</script>
+	

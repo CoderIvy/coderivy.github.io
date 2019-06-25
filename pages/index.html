@@ -76,6 +76,20 @@
   
 
 
+  <li><a href="/tags">Tags</a></li>
+
+
+
+  
+
+
+  <li><a href="/about">About me</a></li>
+
+
+
+  
+
+
   <li><a href="/archive">Archive</a></li>
 
 
@@ -98,20 +112,6 @@
   <li class="active"><a href="/pages" class="active">Pages</a></li>
 
 
-
-
-
-  
-
-
-  <li><a href="/tags">Tags</a></li>
-
-
-
-  
-
-
-  <li><a href="/about">About me</a></li>
 
 
 
@@ -159,3 +159,20 @@
 </script>
   </body>
 </html>
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+	var _gor_compile_ver = 0;
+	function _sc(data) {
+		if (parseInt(data) != _gor_compile_ver) {
+			location.reload(true);
+		} else {
+			setTimeout(_gor_f5, 1000);
+		}
+	}
+	function _gor_f5() {$.get("/_api/f5?ver="+_gor_compile_ver, "", _sc)};
+	$.get("/_api/f5", "",  function(data) {_gor_compile_ver = parseInt(data);setTimeout(_gor_f5, 1000);});
+	});
+</script>
+	
