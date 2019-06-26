@@ -116,11 +116,10 @@ I am working on a react project this morning, and I found I need a new model fil
 <strong>description:</strong><br>
 These are my personal git notes for my daily life.<br><br></p>
 
-<pre><code class="language-git">check file status &lt;br&gt;&lt;br&gt;
+<p><code>git status</code>
+check file status <br><br></p>
 
-</code></pre>
-
-<p>git clone RepositoryURL```
+<p><code>git clone RepositoryURL</code>
 clone a github repository to you local folder. <br><br></p>
 
 
@@ -134,14 +133,14 @@ clone a github repository to you local folder. <br><br></p>
 
   <p><br>
 <strong>Description:</strong>  <br>
-I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
-
-<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
-</code></pre>
+I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,
+ <code>
+ word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
+</code></p>
 
 <p>Here is the sample code for these three properties,</p>
 
-<p>```</p>
+<p></p>
 
 
   <div class="more">
@@ -269,20 +268,3 @@ Add a native scrollbar to the project and make the scrollbar thinner.</p>
 </script>
   </body>
 </html>
-
-<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-	var _gor_compile_ver = 0;
-	function _sc(data) {
-		if (parseInt(data) != _gor_compile_ver) {
-			location.reload(true);
-		} else {
-			setTimeout(_gor_f5, 1000);
-		}
-	}
-	function _gor_f5() {$.get("/_api/f5?ver="+_gor_compile_ver, "", _sc)};
-	$.get("/_api/f5", "",  function(data) {_gor_compile_ver = parseInt(data);setTimeout(_gor_f5, 1000);});
-	});
-</script>
-	

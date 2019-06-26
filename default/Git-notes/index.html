@@ -73,83 +73,70 @@
 <strong>description:</strong><br>
 These are my personal git notes for my daily life.<br><br></p>
 
-<pre><code class="language-git">check file status &lt;br&gt;&lt;br&gt;
+<p><code>git status</code>
+check file status <br><br></p>
 
-</code></pre>
-
-<p>git clone RepositoryURL```
+<p><code>git clone RepositoryURL</code>
 clone a github repository to you local folder. <br><br></p>
 
-<pre><code class="language-git">add the file you name it. &lt;br&gt;&lt;br&gt;
+<p><code>git add FilePath</code>
+add the file you name it. <br><br></p>
 
-</code></pre>
-
-<p>git add . ```
+<p><code>git add .</code>
 add all files you has modified. <br><br></p>
 
-<pre><code class="language-git">commit the changes you have added and add a comment for this change ad the same time. (**Note:** If you miss '-m', it will open a VIM file for you to add comment for this commit after this command) &lt;br&gt;&lt;br&gt;
+<p><code>git commit -m &quot;your comment for this commit&quot;</code>
+commit the changes you have added and add a comment for this change ad the same time. (<strong>Note:</strong> If you miss &lsquo;-m&rsquo;, it will open a VIM file for you to add comment for this commit after this command) <br><br></p>
 
-</code></pre>
-
-<p>git pull```
+<p><code>git pull</code>
 pull code from remote repository (<strong>Note:</strong> to avoid overwrite code in remote repository, it is better to use &lsquo;git pull&rsquo; before every &lsquo;git push&rsquo; )<br><br></p>
 
-<pre><code class="language-git">push your local changes to remote repository &lt;br&gt;&lt;br&gt;
+<p><code>git push</code>
+push your local changes to remote repository <br><br></p>
 
-</code></pre>
-
-<p>git stash```
+<p><code>git stash</code>
 save current changes to current branch<br><br></p>
 
-<pre><code class="language-git">list your stash list in current branch&lt;br&gt;&lt;br&gt;
+<p><code>git stash list</code>
+list your stash list in current branch<br><br></p>
 
-</code></pre>
-
-<p>git stash pop```
+<p><code>git stash pop</code>
 show the latest chage which you stashed before<br><br></p>
 
-<pre><code class="language-git">drop the latest stash code which you stashed before&lt;br&gt;&lt;br&gt;
+<p><code>git stash drop</code>
+drop the latest stash code which you stashed before<br><br></p>
 
-</code></pre>
-
-<p>git mergetool ```
+<p><code>git mergetool</code>
 open git’s merge tool to handle merge event<br><br></p>
 
-<pre><code class="language-gitk```">show all commit histories, including your local changes&lt;br&gt;&lt;br&gt;
+<p><code>gitk</code>
+show all commit histories, including your local changes<br><br></p>
 
-</code></pre>
-
-<p>git config --global merge.tool meld```
+<p><code>git config --global merge.tool meld</code>
 set &lsquo;Meld&rsquo; as default merge tool<br><br></p>
 
-<pre><code class="language-git">set 'Meld' file path to default merge tool&lt;br&gt;&lt;br&gt;
+<p><code>git config --global mergetool.meld.path /filepath/filepath/</code>
+set &lsquo;Meld&rsquo; file path to default merge tool<br><br></p>
 
-</code></pre>
-
-<p>Git checkout -b NewBranchName RemoteBranchName```
+<p><code>Git checkout -b NewBranchName RemoteBranchName</code>
 create a new branch based on a remote branch<br><br></p>
 
-<pre><code class="language-git">Delete the most recent commit, **keeping** the work you've done (**Note:** this command works for commits haven't push to remote repository, the number show how many local commit you want to reset)&lt;br&gt;&lt;br&gt;
+<p><code>git reset --soft HEAD~1</code>
+Delete the most recent commit, <strong>keeping</strong> the work you&rsquo;ve done (<strong>Note:</strong> this command works for commits haven&rsquo;t push to remote repository, the number show how many local commit you want to reset)<br><br></p>
 
-</code></pre>
-
-<p>git reset --hard HEAD~1```
+<p><code>git reset --hard HEAD~1</code>
 Delete the most recent commit, <strong>destroying</strong> the work you&rsquo;ve done <br><br></p>
 
-<pre><code class="language-git">show all branches the repository has, including the branches you never used&lt;br&gt;&lt;br&gt;
+<p><code>git branch --all</code>
+show all branches the repository has, including the branches you never used<br><br></p>
 
-
-</code></pre>
-
-<p>git checkout BranchName```
+<p><code>git checkout BranchName</code>
 switch to named branch<br><br></p>
 
-<pre><code class="language-Git">delete named branch&lt;br&gt;&lt;br&gt;
+<p><code>Git branch -D BranchName</code>
+delete named branch<br><br></p>
 
-
-</code></pre>
-
-<p>Git merge BranchName```
+<p><code>Git merge BranchName</code>
 merge branch (<strong>Note</strong> the BranchName should be the one your want fetch data from and your current branch should be the one you want get more data)<br><br></p>
 
 <p>Any feedback is welcome! :)  <br><br></p>
@@ -174,20 +161,6 @@ merge branch (<strong>Note</strong> the BranchName should be the one your want f
     </div>
     <hr>
     
-<div id="disqus_thread"></div>
-<script>
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
   </div>
   
   <div class="span4">
@@ -254,20 +227,3 @@ merge branch (<strong>Note</strong> the BranchName should be the one your want f
 </script>
   </body>
 </html>
-
-<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-	var _gor_compile_ver = 0;
-	function _sc(data) {
-		if (parseInt(data) != _gor_compile_ver) {
-			location.reload(true);
-		} else {
-			setTimeout(_gor_f5, 1000);
-		}
-	}
-	function _gor_f5() {$.get("/_api/f5?ver="+_gor_compile_ver, "", _sc)};
-	$.get("/_api/f5", "",  function(data) {_gor_compile_ver = parseInt(data);setTimeout(_gor_f5, 1000);});
-	});
-</script>
-	

@@ -71,10 +71,10 @@
   <div class="span8">
     <p><br>
 <strong>Description:</strong>  <br>
-I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
-
-<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
-</code></pre>
+I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,
+ <code>
+ word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
+</code></p>
 
 <p>Here is the sample code for these three properties,</p>
 
@@ -157,20 +157,6 @@ Any feedback is welcome! :)  <br><br></p>
     </div>
     <hr>
     
-<div id="disqus_thread"></div>
-<script>
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
   </div>
   
   <div class="span4">
@@ -237,20 +223,3 @@ Any feedback is welcome! :)  <br><br></p>
 </script>
   </body>
 </html>
-
-<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-	var _gor_compile_ver = 0;
-	function _sc(data) {
-		if (parseInt(data) != _gor_compile_ver) {
-			location.reload(true);
-		} else {
-			setTimeout(_gor_f5, 1000);
-		}
-	}
-	function _gor_f5() {$.get("/_api/f5?ver="+_gor_compile_ver, "", _sc)};
-	$.get("/_api/f5", "",  function(data) {_gor_compile_ver = parseInt(data);setTimeout(_gor_f5, 1000);});
-	});
-</script>
-	
