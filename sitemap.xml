@@ -4,7 +4,7 @@
 		<loc>http://coderivy.com/</loc>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Deploy-website-to-AWS-via-visual-studio/</loc>
+		<loc>http://coderivy.com/default/deploy-website-to-AWS-via-visual-studio/</loc>
 		<lastmod>2019-06-28</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
@@ -19,7 +19,7 @@
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/App.model--namespace-should-be-unique/</loc>
+		<loc>http://coderivy.com/default/app.model--namespace-should-be-unique/</loc>
 		<lastmod>2019-06-17</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
