@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>deploy website to AWS via visual studio</title>
+  
+    <meta name="author" content="Lan Chen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/twitter/stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css" type="text/css" rel="stylesheet" media="all">
+ 
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Lan&#39;s Tech Notes</a>
+          <ul class="nav">
+            
+              
+
+
+  <li><a href="/archive">Archive</a></li>
+
+
+            
+              
+
+
+  <li><a href="/tags">Tags</a></li>
+
+
+            
+              
+
+
+  <li><a href="/about">About me</a></li>
+
+
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+  <h1 style="margin-bottom: 10px;">deploy website to AWS via visual studio </h1>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-28</a></span><br /><br />
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>This is a note to reminding me how to publish ASP.NET Core website to AWS via Visual studio.
+PS: My Visual studio version is Enterprise 2017.  Hope it also helps you, good luck.<br><br></p>
+
+<p><strong>Step 1: AWS setting</strong><br>
+If you already create a user and add access policy for that user, please go to step 2.<br><br></p>
+
+<p>If you don’t have an AWS account, click the link to create an AWS account:<br><br></p>
+
+<p><a href="https://portal.aws.amazon.com/billing/signup#/start">https://portal.aws.amazon.com/billing/signup#/start</a>  <br><br></p>
+
+<p>Please note that to authorize your AWS account, you have to bind a valid bank account to your AWS account which can use online and it has at least $1. <br><br></p>
+
+<p>After your AWS account was authorized, login to your account ‘Service’ -&gt; ‘Security, Identity &amp; Compliance’ -&gt; ‘IAM’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/1.png" alt="" width="800"><br><br></p>
+
+<p>In the left-hand side, select ‘Groups’ -&gt; ‘Create New Group’ (if you don’t want to put the user in a group, you can create a new user and attach policy directly.)<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/2.png" alt="" width="600"><br><br></p>
+
+<p>Input your group name, click ‘Next’ to attach policy, select ‘AmazonEC2FullAccess’ &amp; ‘AWSElasticBeanstalkFullAccess’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/3.png" alt="" width="600"><br><br>
+<img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/4.png" alt="" width="600"><br><br></p>
+
+<p>After you created group, select ‘User’ in the left-hand sidebar, click ‘Add New User’, input user name, the access type chose ‘Programmatic access’ <br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/5.png" alt="" width="800"><br><br></p>
+
+<p>Add user to the group, it’s ok if you don’t have a group, but don’t forget to attach access policy for your user, just the same as attaching the access policy to a group.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/6.png" alt="" width="800"><br><br></p>
+
+<p>After you add user successfully, you will have ‘Access key ID’ &amp; ‘Secret access key’, remember this, you will need this for you AWS setting in visual studio.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/7.png" alt="" width="800"><br><br></p>
+
+<p><strong>Step 2: add database</strong><br>
+go to &lsquo;Service&rsquo; -&gt; &lsquo;database&rsquo; -&gt; &lsquo;RDS&rsquo; -&gt; &lsquo;Instances&rsquo; -&gt; &lsquo;Lunch DB instance&rsquo;<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/8.png" alt="" width="800"><br><br></p>
+
+<p>click &lsquo;Lunch DB instance&rsquo; to create your database instance, if you don&rsquo;t want to receive a bill about this, don&rsquo;t forget to choose a free tier database, there is a filter box on the bottom of the page if you click that, the only free database is available.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/9.png" alt="" width="600"><br><br></p>
+
+<p>set you DB instance info:<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/10.png" alt="" width="500"><br><br></p>
+
+<p>after DB instance created, click your DB instance, go to &lsquo;security group&rsquo;, click it<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/11.png" alt="" width="800"><br><br></p>
+
+<p>change your setting for DB access.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/12.png" alt="" width="800"><br><br></p>
+
+<p>input the database setting to your file &lsquo;appsetting.json&rsquo;:<br><br></p>
+
+<p>&ldquo;DefaultConnection&rdquo;: &ldquo;Server=YourDBInstanceEndpoint;Database=YourDatabaseName;user id=YourMasterUserNameFromDBInstance;password=YourMasterPasswordFromDBInstance;&rdquo;<br><br></p>
+
+<p><strong>Step 3: Visual studio setting</strong><br><br>
+For configure the Visual Studio environment, you have to install ‘AWSSDK.EC2’ &amp; ‘AWSSKD’<br><br></p>
+
+<p>There are two ways to install ‘AWSSDK.EC2’:<br><br></p>
+
+<p>The first is to install it via ‘Visual studio’ -&gt; ‘Tools’ -&gt; ‘NuGet package Manager’, you won’t have ‘AWS explorer’ in your VS.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/13.png" alt="" width="400"><br><br>
+<img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/14.png" alt="" width="400"><br><br></p>
+
+<p>Another way is to download ‘MSI Installer’. The installer will include the AWS Toolkit for Visual Studio and AWS Tools for PowerShell, you will get a ‘AWS Explorer’ in your VS.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/15.png" alt="" width="800"><br><br></p>
+
+<p>Installing AWS Tools …<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/16.png" alt="" width="600"><br><br></p>
+
+<p>AWS Explorer<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/17.png" alt="" width="400"><br><br></p>
+
+<p>Install ‘AWS Toolkit’ via visual studio, ‘Tools’ -&gt; ‘Extensions and Updates’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/18.png" alt="" width="400"><br><br></p>
+
+<p>Once you install it, you see it in your ‘Extensions and Updates’ -&gt; ‘Installed’ page<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/19.png" alt="" width="800"><br><br></p>
+
+<p>All tools are installed.<br><br></p>
+
+<p>Add profile to your ‘AWS Explorer’, click ‘+’, ‘New Account Profile’ window will show. Input a profile name, the have ‘Access key ID’ &amp; ‘Secret access key’ is the keys you got from your ‘AWS’-&gt; ‘IAM’-&gt; ‘User’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/20.png" alt="" width="700"><br><br></p>
+
+<p>Everything is done, let’s start to publish our website to AWS via visual studio.<br><br></p>
+
+<p><strong>Step 4: Publish the website to AWS via visual studio</strong><br><br>
+Right click on your project, select ‘Publish to AWS Elastic Beanstalk’…<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/21.png" alt="" width="600"><br><br></p>
+
+<p>You can choose different account profile, for me, I just have one profile which connects to AWS account. You can choose ‘Redeploy to an existing environment’ or ‘new environment’
+<br><br>
+<img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/22.png" alt="" width="700"><br><br></p>
+
+<p>Check the URL is available or not<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/23.png" alt="" width="700"><br><br></p>
+
+<p>I create a new key pair, just click dropdown arrow -&gt; ‘Create a new key pair’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/24.png" alt="" width="700"><br><br></p>
+
+<p>The Deployed Application Permissions will auto fill-up for you<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/25.png" alt="" width="700"><br><br></p>
+
+<p>click ‘Next’ -&gt; ‘Deploy’ button, it will start to publish your project, you can see this info from ‘AWS Explorer’<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/26.png" alt="" width="800"><br><br></p>
+
+<p>Once the project was done, the ‘AWS Explorer’ window will show ‘INFO  Successfully launched environment: xxxxx’, you can click the URL shown in the top of the window.<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/27.png" alt="" width="800"><br><br></p>
+
+<p>My sample project was published successfully. So far, everything is done, enjoy your journey at C# .NET Core and AWS…<br><br></p>
+
+<p><img src="/assets/media/2019-06-28-deploy-website-to-AWS-via-visual-studio/28.png" alt="" width="800"><br><br></p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+        <ul>
+          
+          
+            <li class="prev disabled"><a>&larr; Previous</a></li>
+          
+
+            <li><a href="/archive">Archive</a></li>
+
+          
+            <li class="next"><a href="/default/Tips-for-SPA-optimization---Vue.js/" title="Tips for SPA optimization - Vue.js">Next &rarr;</a></li>
+          
+          
+        </ul>
+      </ul>
+    </div>
+    <hr>
+    
+  </div>
+  
+  <div class="span2">
+    <h4>Published</h4>
+    <div class="date"><span>2019-06-28</span></div>
+    <br>
+    <h4>Categories</h4>
+    <ul class="tag_box">
+    
+      <li>
+  <a href="/categories/#default-ref">default <span>9</span></a>
+</li>
+    
+    </ul>
+    <br>
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+      <li>
+  <a href="/tags/#AWS-ref">AWS <span>1</span></a>
+</li>
+    
+    </ul>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; Lan Chen 2019 
+          with help from <a href="http://github.com/wendal/gor" target="_blank" title="Gor -- Fast Blog">Gor</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+		  and Idea from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-123-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

@@ -4,6 +4,11 @@
 		<loc>http://coderivy.com/</loc>
 	</url>
 	<url>
+		<loc>http://coderivy.com/default/deploy-website-to-AWS-via-visual-studio/</loc>
+		<lastmod>2019-06-28</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
 		<loc>http://coderivy.com/default/Tips-for-SPA-optimization---Vue.js/</loc>
 		<lastmod>2019-06-23</lastmod>
 		<changefreq>weekly</changefreq>
