@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Use Visual Studio connect a remote project</title>
+    <title>React Error: Inavlid attempt to spread non-iterable instance</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -64,56 +64,52 @@
 
       <div class="content">
         <div class="page-header">
-  <h1 style="margin-bottom: 10px;">Use Visual Studio connect a remote project </h1>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-05-10</a></span><br /><br />
+  <h1 style="margin-bottom: 10px;">React Error: Inavlid attempt to spread non-iterable instance </h1>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-28</a></span><br /><br />
 </div>
 
 <div class="row">
   <div class="span10">
-    <p>Use Visual Studio &amp; server URL to connect all your remote projects from the same server (the one you have access permission).<br />
-<br></p>
+    <p>I&rsquo;ve got an Uncaught TypeError: Invalid attempt to spread non-iterable instance because of I miss a curly bracket when I receiving data from parent component, and I used this data to render a list.<br><br></p>
 
-<ol>
-<li><p>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br />
-<br></p></li>
+<p>Here is the error: <br></p>
 
-<li><p>Team Explorer shows as the following picture<br />
-click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
-<br></p></li>
+<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/1.png" alt="" width="800"><br><br></p>
 
-<li><p>Enter your server URL, click &lsquo;Add&rsquo;<br />
-after a while, all projects from the server which you have permission will show as below<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/3.png" alt="" width="400"><br />
-<br></p></li>
+<p>Here is the code: <br></p>
 
-<li><p>Choose a project you want to connect and click the &lsquo;Connect&rsquo; button in the bottom<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/4.png" alt="" width="400">
-<br></p></li>
+<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/2.png" alt="" width="600"><br><br></p>
 
-<li><p>The project&rsquo;s full URL will show as below<br />
-Choose a folder which you want to save the code and click &lsquo;clone&rsquo; to clone the project from remote to local<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/5.png" alt="" width="400">
-<br></p></li>
-</ol>
+<p>Here is the console log data: <br></p>
 
-<p><br><br>
-Any feedback is welcome! :-)  <br><br></p>
+<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/3.png" alt="" width="800"><br><br></p>
+
+<p>There are 2 ways to fix this problem:<br>
+the first one is to get the array from the object rather than directly put an object as a datasource, shown as follow:<br></p>
+
+<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/4.png" alt="" width="600"><br><br></p>
+
+<p>another one is add a curly bracket when you receving the data, code shown as follow:<br>
+<img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/5.png" alt="" width="600"><br><br></p>
+
+<p>This is the console log data after adding curly bracket to receive data <br>
+<img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/6.png" alt="" width="800"><br><br></p>
+
+<p>Any feedback is welcome! :-)  <br><br></p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/React-Uncaught-Invariant-Violation/" title="React Uncaught Invariant Violation">&larr; Previous</a></li>
+            <li class="prev"><a href="/default/deploy-website-to-AWS-via-visual-studio/" title="deploy website to AWS via visual studio">&larr; Previous</a></li>
           
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/Git-clone-authentication-failed/" title="Git clone authentication failed">Next &rarr;</a></li>
+            <li class="next"><a href="/default/Tips-for-SPA-optimization---Vue.js/" title="Tips for SPA optimization - Vue.js">Next &rarr;</a></li>
           
           
         </ul>
@@ -125,7 +121,7 @@ Any feedback is welcome! :-)  <br><br></p>
   
   <div class="span2">
     <h4>Published</h4>
-    <div class="date"><span>2019-05-10</span></div>
+    <div class="date"><span>2019-06-28</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -140,7 +136,7 @@ Any feedback is welcome! :-)  <br><br></p>
     <ul class="tag_box">
     
       <li>
-  <a href="/tags/#VS-ref">VS <span>1</span></a>
+  <a href="/tags/#React-ref">React <span>3</span></a>
 </li>
     
     </ul>

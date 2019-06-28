@@ -117,8 +117,12 @@ set &lsquo;Meld&rsquo; as default merge tool<br><br></p>
 <p><code>git config --global mergetool.meld.path /filepath/filepath/</code>
 set &lsquo;Meld&rsquo; file path to default merge tool<br><br></p>
 
-<p><code>Git checkout -b NewBranchName RemoteBranchName</code>
+<p><code>git checkout -b NewBranchName RemoteBranchName</code>
 create a new branch based on a remote branch<br><br></p>
+
+<p><code>Git checkout -b NewBranchName Your SHA1 ID</code>
+create a new local branch based on a named commit. you can use <code>gitk</code> to check your SHA1 ID<br>
+<img src="/assets/media/2019-06-17-Git-notes/1.png" alt="" width="600"><br><br></p>
 
 <p><code>git reset --soft HEAD~1</code>
 Delete the most recent commit, <strong>keeping</strong> the work you&rsquo;ve done (<strong>Note:</strong> this command works for commits haven&rsquo;t push to remote repository, the number show how many local commit you want to reset)<br><br></p>
@@ -132,13 +136,13 @@ show all branches the repository has, including the branches you never used<br><
 <p><code>git checkout BranchName</code>
 switch to named branch<br><br></p>
 
-<p><code>Git branch -D BranchName</code>
+<p><code>git branch -D BranchName</code>
 delete named branch<br><br></p>
 
-<p><code>Git merge BranchName</code>
+<p><code>git merge BranchName</code>
 merge branch (<strong>Note</strong> the BranchName should be the one your want fetch data from and your current branch should be the one you want get more data)<br><br></p>
 
-<p>Any feedback is welcome! :)  <br><br></p>
+<p>Any feedback is welcome! :-)  <br><br></p>
 
     <hr>
     <div class="pagination">
@@ -170,7 +174,7 @@ merge branch (<strong>Note</strong> the BranchName should be the one your want f
     <ul class="tag_box">
     
       <li>
-  <a href="/categories/#default-ref">default <span>9</span></a>
+  <a href="/categories/#default-ref">default <span>10</span></a>
 </li>
     
     </ul>
