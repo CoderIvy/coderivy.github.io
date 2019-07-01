@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://coderivy.com/</loc>
+		<loc>https://www.coderivy.com/</loc>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/deploy-website-to-AWS-via-visual-studio/</loc>
+		<loc>https://www.coderivy.com/default/deploy-website-to-AWS-via-visual-studio/</loc>
 		<lastmod>2019-06-28</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/React-Error--Inavlid-attempt-to-spread-non-iterable-instance/</loc>
+		<loc>https://www.coderivy.com/default/React-Error--Inavlid-attempt-to-spread-non-iterable-instance/</loc>
 		<lastmod>2019-06-28</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Tips-for-SPA-optimization---Vue.js/</loc>
+		<loc>https://www.coderivy.com/default/Tips-for-SPA-optimization---Vue.js/</loc>
 		<lastmod>2019-06-23</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/app.model--namespace-should-be-unique/</loc>
+		<loc>https://www.coderivy.com/default/app.model--namespace-should-be-unique/</loc>
 		<lastmod>2019-06-17</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Git-notes/</loc>
+		<loc>https://www.coderivy.com/default/Git-notes/</loc>
 		<lastmod>2019-06-17</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Three-ways-to-break-a-long-word-in-a-small-container/</loc>
+		<loc>https://www.coderivy.com/default/Three-ways-to-break-a-long-word-in-a-small-container/</loc>
 		<lastmod>2019-06-10</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/React-Uncaught-Invariant-Violation/</loc>
+		<loc>https://www.coderivy.com/default/React-Uncaught-Invariant-Violation/</loc>
 		<lastmod>2019-06-03</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Use-Visual-Studio-connect-a-remote-project/</loc>
+		<loc>https://www.coderivy.com/default/Use-Visual-Studio-connect-a-remote-project/</loc>
 		<lastmod>2019-05-10</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/Git-clone-authentication-failed/</loc>
+		<loc>https://www.coderivy.com/default/Git-clone-authentication-failed/</loc>
 		<lastmod>2019-05-07</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://coderivy.com/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/</loc>
+		<loc>https://www.coderivy.com/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/</loc>
 		<lastmod>2019-05-06</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
