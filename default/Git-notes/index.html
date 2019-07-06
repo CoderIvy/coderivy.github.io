@@ -122,7 +122,7 @@ create a new branch based on a remote branch<br><br></p>
 
 <p><code>Git checkout -b NewBranchName Your SHA1 ID</code>
 create a new local branch based on a named commit. you can use <code>gitk</code> to check your SHA1 ID<br>
-<img src="/assets/media/2019-06-17-Git-notes/1.png" alt="" width="600"><br><br></p>
+<img src="/assets/media/2019-06-17-Git-notes/1.png" alt="" width="400"><br><br></p>
 
 <p><code>git reset --soft HEAD~1</code>
 Delete the most recent commit, <strong>keeping</strong> the work you&rsquo;ve done (<strong>Note:</strong> this command works for commits haven&rsquo;t push to remote repository, the number show how many local commit you want to reset)<br><br></p>
@@ -141,6 +141,10 @@ delete named branch<br><br></p>
 
 <p><code>git merge BranchName</code>
 merge branch (<strong>Note</strong> the BranchName should be the one your want fetch data from and your current branch should be the one you want get more data)<br><br></p>
+
+<p><code>git log -S &quot;KeywordsInTheFile&quot; --source --all --reverse</code>
+search all file&rsquo;s commit which contains the keyword you mentioned. The command without <code>--reverse</code> will show the latest one in front.
+<img src="/assets/media/2019-06-17-Git-notes/2.png" alt="" width="600"><br><br></p>
 
 <p>Any feedback is welcome! :-)  <br><br></p>
 
@@ -174,7 +178,7 @@ merge branch (<strong>Note</strong> the BranchName should be the one your want f
     <ul class="tag_box">
     
       <li>
-  <a href="/categories/#default-ref">default <span>10</span></a>
+  <a href="/categories/#default-ref">default <span>11</span></a>
 </li>
     
     </ul>

@@ -77,6 +77,27 @@
 
 
 <div class="post">
+  <p class="title"><a style="color: black;" href="/default/React-Router-moving-forward-%26-backward/">React Router moving forward &amp; backward</a> </p>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-07-06</a></span><br /><br />
+
+  <p>I am currently working on a project for mobile webview which developed by React, so I need a &lsquo;&lt;&rsquo; button at the top for backward navigation. Because my project use umijs as routing framework, I can just simply use <code>router.push(path)</code> ,  <code>router.replace(path)</code>  and  <code>router.goback()</code>to deal with forward &amp; backward navigation. <br><br>
+How to use it:<br><br></p>
+
+<ul>
+<li><code>router.push()</code> push the URL to history stack which you wish you can go back by clicking the &lsquo;&lt;&rsquo; button<br></li>
+<li><code>router.replace()</code> replace current page&rsquo;s URL to a new URL, no history in the history stack<br></li>
+<li><code>router.goback()</code> set it to &lsquo;&lt;&rsquo; button&rsquo;s onClick function. when you click on this button, the history stack will pop the latest URL and redirect to that page <br><br></li>
+</ul>
+
+<p>The native React Router has the same functionalities as umi, they are <code>createBrowserHistory</code>, <code>createMemoryHistory</code>  and  <code>createHashHistory</code><br><br></p>
+
+
+  <div class="more">
+    <a href="/default/React-Router-moving-forward-%26-backward/" >Read More <span style="font-size: 10px;">>></span></a>
+  </div>
+</div>
+
+<div class="post">
   <p class="title"><a style="color: black;" href="/default/deploy-website-to-AWS-via-visual-studio/">deploy website to AWS via visual studio</a> </p>
   <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-28</a></span><br /><br />
 
@@ -118,7 +139,7 @@ If you already create a user and add access policy for that user, please go to s
 
   <p>Useful tips for Vue.js Single Page Application optimization, <a href="https://medium.com/binarcode/tips-for-building-fast-and-light-vue-js-spa-7a83407d4bc3">Tips for building fast and light Vue.js SPA</a></p>
 
-<p><strong>Note:</strong> for people who fist visit medium.com, you might have to login with a google or facebook account, and re-click the link.</p>
+<p><strong>Note:</strong> for people who fist visit medium.com, you might have to login with a google or facebook account, and re-click the link.<br><br></p>
 
 <p>Any feedback is welcome! :-)  <br><br></p>
 
@@ -238,29 +259,6 @@ Git didn’t ask me to input my username and password for this repository, just 
 
   <div class="more">
     <a href="/default/Git-clone-authentication-failed/" >Read More <span style="font-size: 10px;">>></span></a>
-  </div>
-</div>
-
-<div class="post">
-  <p class="title"><a style="color: black;" href="/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/">How to make the native scrollbar thinner in Google Chrome</a> </p>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-05-06</a></span><br /><br />
-
-  <p>Add a native scrollbar to the project and make the scrollbar thinner.</p>
-
-<p>Most people knew how to add a scrollbar to your pages when the content of an element is too big to fit in the specified area. So, I will just give a brief introduction to CSS <strong>overflow</strong> property. <strong>overflow</strong> property has the following values:  <br><br></p>
-
-<ul>
-<li>visible - Default. The overflow is not clipped. The content renders outside the element&rsquo;s box<br /></li>
-<li>hidden - The overflow is clipped, and the rest of the content will be invisible<br /></li>
-<li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content<br /></li>
-<li>auto - Similar to scroll, but it adds scrollbars only when necessary<br />
-<br>
-Please <strong>note</strong> that: the <strong>overflow</strong> property only works for block elements with a specified height.</li>
-</ul>
-
-
-  <div class="more">
-    <a href="/default/How-to-make-the-native-scrollbar-thinner-in-Google-Chrome/" >Read More <span style="font-size: 10px;">>></span></a>
   </div>
 </div>
 
