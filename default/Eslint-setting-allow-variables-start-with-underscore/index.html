@@ -72,15 +72,17 @@
   <div class="span10">
     <p>I&rsquo;ve got an <code>Unexpected dangling '_' in '_origin'  no-underscore-dangle</code> error when I used <code>_</code> as the beginning  of a variable because of naming conventions for identifiers in JavaScript. <br><br></p>
 
-<p>This error comes from rules <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which setuped in a setting file <strong>.eslintrc.js</strong>. As this variable is a &ldquo;private&rdquo; member of an object so I want to continue using &ldquo;_&rdquo; as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong>. But I don&rsquo;t want to allow all variables can start with <code>_</code>.  <br><br></p>
+<p>This error comes from a rule <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which set up in a setting file <strong>.eslintrc.js</strong>. This rule means disallow all variables&rsquo; name start or end with <code>_</code> except for the variable <code>'_store'</code>. <br> <br></p>
 
-<p>There is an easy way to do this, adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
+<p>As the variable which I want to use is a &ldquo;private&rdquo; member of an object so I want to continue using <code>_</code> as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong> but I don&rsquo;t really need to allow all variables can start with <code>_</code>.  <br><br></p>
+
+<p>There is an easy way to solve this little error that is adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
 
 <pre><code> /* eslint no-underscore-dangle:0 */
  const origin = item[0]._origin;  
 </code></pre>
 
-<p>In this way it will just ignore the error shows on that line.  <br><br>
+<p>In this way it will just ignore the error shows on that line.  <br>
  <br><br>
 Any feedback is welcome! :-)  <br><br></p>
 

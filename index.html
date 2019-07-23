@@ -82,13 +82,13 @@
 
   <p>I&rsquo;ve got an <code>Unexpected dangling '_' in '_origin'  no-underscore-dangle</code> error when I used <code>_</code> as the beginning  of a variable because of naming conventions for identifiers in JavaScript. <br><br></p>
 
-<p>This error comes from rules <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which setuped in a setting file <strong>.eslintrc.js</strong>. As this variable is a &ldquo;private&rdquo; member of an object so I want to continue using &ldquo;_&rdquo; as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong>. But I don&rsquo;t want to allow all variables can start with <code>_</code>.  <br><br></p>
+<p>This error comes from a rule <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which set up in a setting file <strong>.eslintrc.js</strong>. This rule means disallow all variables&rsquo; name start or end with <code>_</code> except for the variable <code>'_store'</code>. <br> <br></p>
 
-<p>There is an easy way to do this, adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
+<p>As the variable which I want to use is a &ldquo;private&rdquo; member of an object so I want to continue using <code>_</code> as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong> but I don&rsquo;t really need to allow all variables can start with <code>_</code>.  <br><br></p>
 
-<pre><code> /* eslint no-underscore-dangle:0 */
- const origin = item[0]._origin;  
-</code></pre>
+<p>There is an easy way to solve this little error that is adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
+
+<p>```</p>
 
 
   <div class="more">
@@ -147,6 +147,10 @@ If you already create a user and add access policy for that user, please go to s
 
 <p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/1.png" alt="" width="800"><br><br></p>
 
+<p>Here is the code: <br></p>
+
+<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/2.png" alt="" width="600"><br><br></p>
+
 
   <div class="more">
     <a href="/default/React-Error--Inavlid-attempt-to-spread-non-iterable-instance/" >Read More <span style="font-size: 10px;">>></span></a>
@@ -176,7 +180,15 @@ If you already create a user and add access policy for that user, please go to s
   <p>I am working on a react project this morning, and I found I need a new model file for a future function so I just simply copy the other exist model file and rename it. Then, the error shows:
 <strong>app.model: namespace should be unique</strong>, the error showing as follows: <br><br></p>
 
-<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800"></p>
+<p><img src="/assets/media/2019-06-17-React-app-model---namespace-should-be-unique/1.png" alt="" width="800">
+<br><br></p>
+
+<p>The error title told me that I have a duplicate namespace on app.model. I look at the model folder double check the file name and there are unique, so google this error, the reasons are variety, such as, <br><br></p>
+
+<ul>
+<li>load the same model more than once<br></li>
+<li>dynamic register model <br></li>
+</ul>
 
 
   <div class="more">
@@ -209,16 +221,57 @@ add the file you name it. <br><br></p>
   <p class="title"><a style="color: black;" href="/default/Three-ways-to-break-a-long-word-in-a-small-container/">Three ways to break a long word in a small container</a> </p>
   <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-10</a></span><br /><br />
 
-  <p>I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,
- <code>
- word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
-</code></p>
+  <p>I met a problem when I fetch data from the database for a table, there is an unusual long string text inside the data, and the table column has a relative width so the data just stretched the  column. I found 3 ways to break an unusual long word in a relatively small container, there are,</p>
+
+<pre><code> word-wrap:break-word;  word-break: break-all; &amp; overflow-wrap: break-word;
+</code></pre>
 
 <p>Here is the sample code for these three properties,</p>
 
-<p>
-&lt;!DOCTYPE html&gt;
-<html></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  width: 140px; 
+  border: 1px solid blue;
+ 
+}
+
+p.a {
+  word-wrap:break-word;
+}
+
+p.b {
+  word-break: break-all;
+}
+
+p.c {
+  overflow-wrap: break-word;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;break an unusually long string at container width&lt;/h1&gt;
+
+&lt;h2&gt;default:&lt;/h2&gt;
+&lt;p&gt;Thisissomeveryveryverylong word. Words will break according to usual rules.&lt;/p&gt;
+
+&lt;h2&gt;word-wrap:break-word:&lt;/h2&gt;
+&lt;p class=&quot;a&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+
+&lt;h2&gt;word-break: break-all:&lt;/h2&gt;
+&lt;p class=&quot;b&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+&lt;h2&gt;overflow-wrap: break-word:&lt;/h2&gt;
+&lt;p class=&quot;c&quot;&gt;Thisissomeveryveryverylong word. This text will break at any character.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
 
 
   <div class="more">
@@ -234,7 +287,12 @@ add the file you name it. <br><br></p>
 <br><br></p>
 
 <p>I used React Hooks to fetch data and ‘antd’ version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
-<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600"></p>
+<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600">
+<br><br></p>
+
+<p>And, here is the error<br/><br/>
+<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/1.png" alt="" width="900">
+<br><br></p>
 
 
   <div class="more">
@@ -250,8 +308,14 @@ add the file you name it. <br><br></p>
 <br></p>
 
 <ol>
-<li>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
-<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br /></li>
+<li><p>Click &lsquo;View&rsquo; -&gt; &lsquo;Team Explorer&rsquo;<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/1.png" alt="" width="450"><br />
+<br></p></li>
+
+<li><p>Team Explorer shows as the following picture<br />
+click the &lsquo;Manage Connection&rsquo; button (the green button) in the top<br />
+<img src="/assets/media/2019-05-10-Use-Visual-Studio-connect-a-project/2.png" alt="" width="400"><br />
+<br></p></li>
 </ol>
 
 
