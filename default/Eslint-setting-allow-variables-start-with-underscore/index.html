@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>React Router moving forward &amp; backward</title>
+    <title>Eslint setting allow variables start with underscore</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -64,41 +64,47 @@
 
       <div class="content">
         <div class="page-header">
-  <h1 style="margin-bottom: 10px;">React Router moving forward &amp; backward </h1>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-07-06</a></span><br /><br />
+  <h1 style="margin-bottom: 10px;">Eslint setting allow variables start with underscore </h1>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-07-23</a></span><br /><br />
 </div>
 
 <div class="row">
   <div class="span10">
-    <p>I am currently working on a project for mobile webview which developed by React, so I need a &lsquo;&lt;&rsquo; button at the top for backward navigation. Because my project use umijs as routing framework, I can just simply use <code>router.push(path)</code> ,  <code>router.replace(path)</code>  and  <code>router.goback()</code>to deal with forward &amp; backward navigation. <br><br>
-How to use it:<br><br></p>
+    <p>I&rsquo;ve got an <code>Unexpected dangling '_' in '_origin'  no-underscore-dangle</code> error when I used <code>_</code> as the beginning  of a variable because of naming conventions for identifiers in JavaScript. <br><br></p>
+
+<p>This error comes from rules <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which setuped in a setting file <strong>.eslintrc.js</strong>. As this variable is a &ldquo;private&rdquo; member of an object so I want to continue using &ldquo;_&rdquo; as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong>. But I don&rsquo;t want to allow all variables can start with <code>_</code>.  <br><br></p>
+
+<p>There is an easy way to do this, adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
+
+<pre><code> /* eslint no-underscore-dangle:0 */
+ const origin = item[0]._origin;  
+</code></pre>
+
+<p>In this way it will just ignore the error shows on that line.  <br><br>
+ <br><br>
+Any feedback is welcome! :-)  <br><br></p>
+
+<h4>References</h4>
 
 <ul>
-<li><code>router.push()</code> push the URL to history stack which you wish you can go back by clicking the &lsquo;&lt;&rsquo; button<br></li>
-<li><code>router.replace()</code> replace current page&rsquo;s URL to a new URL, no history in the history stack<br></li>
-<li><code>router.goback()</code> set it to &lsquo;&lt;&rsquo; button&rsquo;s onClick function. when you click on this button, the history stack will pop the latest URL and redirect to that page <br><br></li>
+<li><p><a href="https://eslint.org/docs/rules/no-underscore-dangle#disallow-dangling-underscores-in-identifiers-no-underscore-dangle">disallow dangling underscores in identifiers (no-underscore-dangle)</a></p></li>
+
+<li><p><a href="https://eslint.org/docs/rules/no-unused-vars">Disallow Unused Variables (no-unused-vars)</a></p></li>
 </ul>
-
-<p>The native React Router has the same functionalities as umi, they are <code>createBrowserHistory</code>, <code>createMemoryHistory</code>  and  <code>createHashHistory</code><br><br></p>
-
-<p>For more detail please visit <a href="https://github.com/ReactTraining/history">React Router</a> and <a href="https://umijs.org/api/#umi-router">umi Router</a></p>
-
-<p><br><br>
-Any feedback is welcome! :-)  <br><br></p>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/Eslint-setting-allow-variables-start-with-underscore/" title="Eslint setting allow variables start with underscore">&larr; Previous</a></li>
           
+            <li class="prev disabled"><a>&larr; Previous</a></li>
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/deploy-website-to-AWS-via-visual-studio/" title="deploy website to AWS via visual studio">Next &rarr;</a></li>
+            <li class="next"><a href="/default/React-Router-moving-forward-%26-backward/" title="React Router moving forward &amp; backward">Next &rarr;</a></li>
           
           
         </ul>
@@ -124,7 +130,7 @@ Any feedback is welcome! :-)  <br><br></p>
   
   <div class="span2">
     <h4>Published</h4>
-    <div class="date"><span>2019-07-06</span></div>
+    <div class="date"><span>2019-07-23</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -139,7 +145,7 @@ Any feedback is welcome! :-)  <br><br></p>
     <ul class="tag_box">
     
       <li>
-  <a href="/tags/#React-ref">React <span>4</span></a>
+  <a href="/tags/#Settings-ref">Settings <span>1</span></a>
 </li>
     
     </ul>

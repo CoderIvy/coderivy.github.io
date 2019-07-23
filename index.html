@@ -77,6 +77,26 @@
 
 
 <div class="post">
+  <p class="title"><a style="color: black;" href="/default/Eslint-setting-allow-variables-start-with-underscore/">Eslint setting allow variables start with underscore</a> </p>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-07-23</a></span><br /><br />
+
+  <p>I&rsquo;ve got an <code>Unexpected dangling '_' in '_origin'  no-underscore-dangle</code> error when I used <code>_</code> as the beginning  of a variable because of naming conventions for identifiers in JavaScript. <br><br></p>
+
+<p>This error comes from rules <code>'no-underscore-dangle': ['error', { allow: ['_store'] }]</code> which setuped in a setting file <strong>.eslintrc.js</strong>. As this variable is a &ldquo;private&rdquo; member of an object so I want to continue using &ldquo;_&rdquo; as the beginning of that variable. Of course, the easiest way to solve this problem is to cancel that rules in <strong>.eslintrc.js</strong>. But I don&rsquo;t want to allow all variables can start with <code>_</code>.  <br><br></p>
+
+<p>There is an easy way to do this, adding this ignore comment <code>/* eslint no-underscore-dangle:0 */</code> at the top of that variable. For example<br> <br></p>
+
+<pre><code> /* eslint no-underscore-dangle:0 */
+ const origin = item[0]._origin;  
+</code></pre>
+
+
+  <div class="more">
+    <a href="/default/Eslint-setting-allow-variables-start-with-underscore/" >Read More <span style="font-size: 10px;">>></span></a>
+  </div>
+</div>
+
+<div class="post">
   <p class="title"><a style="color: black;" href="/default/React-Router-moving-forward-%26-backward/">React Router moving forward &amp; backward</a> </p>
   <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-07-06</a></span><br /><br />
 
@@ -237,28 +257,6 @@ add the file you name it. <br><br></p>
 
   <div class="more">
     <a href="/default/Use-Visual-Studio-connect-a-remote-project/" >Read More <span style="font-size: 10px;">>></span></a>
-  </div>
-</div>
-
-<div class="post">
-  <p class="title"><a style="color: black;" href="/default/Git-clone-authentication-failed/">Git clone authentication failed</a> </p>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-05-07</a></span><br /><br />
-
-  <p>I’ve got an “Authentication failed” error when I use “git clone my_repository_url” to clone a project form remote to local in Windows 10 Pro’s Terminal.<br><br></p>
-
-<p><strong>Reason:</strong><br />
-Git didn’t ask me to input my username and password for this repository, just simply show a failed error. And there are no credential details about this repository in windows credential manager.</p>
-
-<p>There are many ways to solve this problem, I’ve tried the following 2 methods:<br><br></p>
-
-<ol>
-<li>use GitHub desktop to clone this project, it will auto pop-up a window remind you to input username and password. This method works for this problem.
-<br><br></li>
-</ol>
-
-
-  <div class="more">
-    <a href="/default/Git-clone-authentication-failed/" >Read More <span style="font-size: 10px;">>></span></a>
   </div>
 </div>
 
