@@ -100,10 +100,13 @@ save current changes to current branch<br><br></p>
 list your stash list in current branch<br><br></p>
 
 <p><code>git stash pop</code>
-show the latest chage which you stashed before<br><br></p>
+show the latest chage which you stashed<br><br></p>
 
 <p><code>git stash drop</code>
-drop the latest stash code which you stashed before<br><br></p>
+drop the latest stashed code in current branch<br><br></p>
+
+<p><code>git stash clear</code>
+drop all stashed code in current branch<br><br></p>
 
 <p><code>git mergetool</code>
 open git’s merge tool to handle merge event<br><br></p>
@@ -138,6 +141,9 @@ switch to named branch<br><br></p>
 
 <p><code>git branch -D BranchName</code>
 delete named branch<br><br></p>
+
+<p><code>git push origin --delete YourRemoteBranchName</code>
+delete named remote branch<br><br></p>
 
 <p><code>git merge BranchName</code>
 merge branch (<strong>Note</strong> the BranchName should be the one your want fetch data from and your current branch should be the one you want get more data)<br><br></p>
