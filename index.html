@@ -44,13 +44,6 @@
               
 
 
-  <li><a href="/tags">Tags</a></li>
-
-
-            
-              
-
-
   <li><a href="/about">About me</a></li>
 
 
@@ -62,19 +55,38 @@
 
     <div class="container">
 
-      <div class="content">
+      <div class="content" style="padding-right: 5%; padding-left: 5%;">
         
 <div class="page-header">
   <h1> </h1>
 </div>
 
 <div class="row">
-  <div class="span12">
+  <div class="span11">
     
 
 
 <!-- <h2>Latest update</h2> -->
 
+
+<div class="post">
+  <p class="title"><a style="color: black;" href="/default/missing-MIME-content-type-when-uploading-file/">missing-MIME-content-type-when-uploading-file</a> </p>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2020-04-18</a></span><br /><br />
+
+  <p>This is a piece of note for solve the problem of using html input tag upload a file through Google Chrome, and the browser cannot recognized the real file content type in Windows system. <br><br></p>
+
+<p>The situation is, I have a list of allow upload file content type in backend, and there is a html input tag for user to upload file</p>
+
+<pre><code>&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot; multiple&gt;
+</code></pre>
+
+<p>when I upload a .doc file, backend throw an <code>Unsupported file type</code> error. Through the network request I realized the broswer can&rsquo;t recognized the real content type, it shows <code>unknown file type</code> in Network -&gt; Request URL-&gt; Header -&gt; Form Data, looks like this <br><br></p>
+
+
+  <div class="more">
+    <a href="/default/missing-MIME-content-type-when-uploading-file/" >Read More <span style="font-size: 10px;">>></span></a>
+  </div>
+</div>
 
 <div class="post">
   <p class="title"><a style="color: black;" href="/default/Tips-for-React-project-optimization/">Tips for React project optimization</a> </p>
@@ -242,29 +254,13 @@ add the file you name it. <br><br></p>
   </div>
 </div>
 
-<div class="post">
-  <p class="title"><a style="color: black;" href="/default/React-Uncaught-Invariant-Violation/">React Uncaught Invariant Violation</a> </p>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-03</a></span><br /><br />
-
-  <p>While rendering a list data, I got an error: ‘react-dom.development.js:55 Uncaught Invariant Violation: Objects are not valid as a React child(found: object with keys {id, typeId, reference, …..}). If you meant to render a collection of children, use an array instead.’
-<br><br></p>
-
-<p>I used React Hooks to fetch data and ‘antd’ version 3.13 as my UI library, List and List.Item are supported by antd. I want to see the raw data so I just simply use a div tag to render the data, but I got an error from the code showing below<br><br>
-<img src="/assets/media/2019-06-03-React-Uncaught-Invariant-Violation/2.png" alt="" width="600"></p>
-
-
-  <div class="more">
-    <a href="/default/React-Uncaught-Invariant-Violation/" >Read More <span style="font-size: 10px;">>></span></a>
-  </div>
-</div>
-
   </div>
 </div>
 
       </div>
 
       <footer>
-        <p>&copy; Lan Chen 2019 
+        <p>&copy; Lan Chen 2020 
           with help from <a href="http://github.com/wendal/gor" target="_blank" title="Gor -- Fast Blog">Gor</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
 		  and Idea from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>React Error: Inavlid attempt to spread non-iterable instance</title>
+    <title>missing-MIME-content-type-when-uploading-file</title>
   
     <meta name="author" content="Lan Chen">
 
@@ -57,57 +57,70 @@
 
       <div class="content" style="padding-right: 5%; padding-left: 5%;">
         <div class="page-header" style="padding-top: 5%; padding-left: 5%;">
-  <h1 >React Error: Inavlid attempt to spread non-iterable instance </h1>
-  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2019-06-28</a></span><br /><br />
+  <h1 >missing-MIME-content-type-when-uploading-file </h1>
+  <span><a href="/about">By Lan Chen</a> <a class="inactiveLink"> / 2020-04-18</a></span><br /><br />
 </div>
 
 <div class="row" >
   <div class="span11" style="display: flex; flex-direction: column; justify-content: center; padding: 3%;">
-    <p>I&rsquo;ve got an Uncaught TypeError: Invalid attempt to spread non-iterable instance because of I miss a curly bracket when I receiving data from parent component, and I used this data to render a list.<br><br></p>
+    <p>This is a piece of note for solve the problem of using html input tag upload a file through Google Chrome, and the browser cannot recognized the real file content type in Windows system. <br><br></p>
 
-<p>Here is the error: <br></p>
+<p>The situation is, I have a list of allow upload file content type in backend, and there is a html input tag for user to upload file</p>
 
-<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/1.png" alt="" width="800"><br><br></p>
+<pre><code>&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot; multiple&gt;
+</code></pre>
 
-<p>Here is the code: <br></p>
+<p>when I upload a .doc file, backend throw an <code>Unsupported file type</code> error. Through the network request I realized the broswer can&rsquo;t recognized the real content type, it shows <code>unknown file type</code> in Network -&gt; Request URL-&gt; Header -&gt; Form Data, looks like this <br><br></p>
 
-<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/2.png" alt="" width="600"><br><br></p>
+<pre><code>------WebKitFormBoundaryUxGCN88e1KDQqR1e
+Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;your-file-name.txt&quot;
+Content-Type: application/octet-stream
+</code></pre>
 
-<p>Here is the console log data: <br></p>
+<p>If the browser know the content type for .doc it will be <br><br></p>
 
-<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/3.png" alt="" width="800"><br><br></p>
+<pre><code>Content-Type: application/msword
+</code></pre>
 
-<p>There are 2 ways to fix this problem:<br></p>
+<p>This error cause by some setting from my computer, I test same code and same file with different laptop, it works. After a bit research, I found out the reason might be because of there is no real content type in my <code>registry editor\HKEY_LOCAL_MACHINE\Software\Classes\.docx folder</code><br><br></p>
 
-<ul>
-<li>get the array from the object rather than directly put an object as a datasource, shown as follow:<br></li>
-</ul>
+<p><img src="/assets/media/2020-04-18-missing-MIME-content-type-when-uploading-file/1.jpeg" alt="missing MIME content type" width="500"><br><br></p>
 
-<p><img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/4.png" alt="" width="600"><br><br></p>
+<p>To add a content type for my .doc folder, all I need to do is just simply right click on the folder&rsquo;s empty palce, choose <code>New -&gt; String Value</code>, and name it as <code>Content Type</code></p>
 
-<ul>
-<li>add a curly bracket when you receving the data, code shown as follow:<br>
-<img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/5.png" alt="" width="600"><br><br></li>
-</ul>
+<p><img src="/assets/media/2020-04-18-missing-MIME-content-type-when-uploading-file/2.jpeg" alt="missing MIME content type" width="300"><br><br></p>
 
-<p>This is the console log data after adding curly bracket to receive data <br>
-<img src="/assets/media/2019-06-28-React-Error--Inavlid-attempt-to-spread-non-iterable-instance/6.png" alt="" width="800"><br><br></p>
+<p>After <code>Content Type</code> file added, right click on the file and choose <code>Modify</code>, add real content type for doc into this Value data field, like this</p>
+
+<p><img src="/assets/media/2020-04-18-missing-MIME-content-type-when-uploading-file/3.jpeg" alt="missing MIME content type" width="700"><br><br></p>
+
+<p><img src="/assets/media/2020-04-18-missing-MIME-content-type-when-uploading-file/4.jpeg" alt="missing MIME content type" width="500"><br><br></p>
+
+<p>Then, done!!   <br></p>
+
+<p>PS: file content type for .doc &amp; .docx are different, please have a look on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">List of MIME types</a> if you need. <br><br></p>
 
 <p>Any feedback is welcome! :-)  <br><br></p>
+
+<h4>References</h4>
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/3442607/mime-types-in-the-windows-registry?answertab=votes#tab-top">stackoverflow info</a></li>
+</ul>
 
     <hr>
     <div class="pagination">
       <ul>
         <ul>
           
-            <li class="prev"><a href="/default/deploy-website-to-AWS-via-visual-studio/" title="deploy website to AWS via visual studio">&larr; Previous</a></li>
           
+            <li class="prev disabled"><a>&larr; Previous</a></li>
           
 
             <li><a href="/archive">Archive</a></li>
 
           
-            <li class="next"><a href="/default/Tips-for-SPA-optimization---Vue.js/" title="Tips for SPA optimization - Vue.js">Next &rarr;</a></li>
+            <li class="next"><a href="/default/Tips-for-React-project-optimization/" title="Tips for React project optimization">Next &rarr;</a></li>
           
           
         </ul>
@@ -133,7 +146,7 @@
   
   <!-- <div class="span2">
     <h4>Published</h4>
-    <div class="date"><span>2019-06-28</span></div>
+    <div class="date"><span>2020-04-18</span></div>
     <br>
     <h4>Categories</h4>
     <ul class="tag_box">
@@ -146,10 +159,6 @@
     <br>
     <h4>Tags</h4>
     <ul class="tag_box">
-    
-      <li>
-  <a href="/tags/#React-ref">React <span>4</span></a>
-</li>
     
     </ul>
   </div>
